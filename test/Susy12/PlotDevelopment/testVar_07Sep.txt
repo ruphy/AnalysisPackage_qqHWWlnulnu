@@ -1,0 +1,34 @@
+### Name       Min   Max   NBin    NameHR
+#
+#
+#
+detajj          0      6        12       detajj
+#
+mjj             0    1000       80       mjj
+#
+mll            12     112       80       mll
+#
+MR2j           0      1000      20       MR
+# MR2j           0      2000      80       MR
+#
+MTR2j          0       500      40       MTR
+# MTR2j          0       500      80       MTR
+#
+R2j            0         2     50       R
+# R2j            0         2     100       R
+#
+1              0         2       2       events
+#
+###################
+#
+##    nvtx            0        80       80       n_{vertexes}
+#
+##    pt1             0    400    80    p_{T}^{l-high}
+##    pt2             0    400    80    p_{T}^{l-low}
+#
+##    mth             0     200        15       mth
+###################
+#
+#
+#
+#

@@ -1,0 +1,129 @@
+# name_sample            xsection        name_human_readable
+#   120_SingleElectron2011Av6          -1.              DATA
+#   121_SingleMuon2011Av6              -1.              DATA
+#   122_DoubleElectron2011Av6          -1.              DATA
+#   123_DoubleMuon2011Av6              -1.              DATA
+#   124_MuEG2011Av6                    -1.              DATA
+#   130_SingleElectron2011Av6v2        -1.              DATA
+#   131_SingleMuon2011Av6v2            -1.              DATA
+#   132_DoubleElectron2011Av6v2        -1.              DATA
+#   133_DoubleMuon2011Av6v2            -1.              DATA
+#   134_MuEG2011Av6v2                  -1.              DATA
+#   150_SingleElectron2011AMay10       -1.              DATA
+#   151_SingleMuon2011AMay10           -1.              DATA
+#   152_DoubleMuon2011AMay10           -1.              DATA
+#   153_DoubleElectron2011AMay10       -1.              DATA
+#   154_MuEG2011AMay10                 -1.              DATA
+#   160_SingleElectron2011AAug05       -1.              DATA
+#   161_SingleMuon2011AAug05           -1.              DATA
+#   162_DoubleElectron2011AAug05       -1.              DATA
+#   163_DoubleMuon2011AAug05           -1.              DATA
+#   164_MuEG2011AAug05                 -1.              DATA
+#   
+#   
+#
+#   210.4 +
+#   124   +
+#   321.1 +
+#   539   +
+#
+#   
+#                  160_SingleElectron2011AAug05       -1.              DATA
+#                  161_SingleMuon2011AAug05           -1.              DATA
+#                  162_DoubleElectron2011AAug05       -1.              DATA
+#                  163_DoubleMuon2011AAug05           -1.              DATA
+#                  164_MuEG2011AAug05                 -1.              DATA
+#   
+#   
+#                  150_SingleElectron2011AMay10       -1.              DATA
+#                  151_SingleMuon2011AMay10           -1.              DATA
+#                  152_DoubleMuon2011AMay10           -1.              DATA
+#                  153_DoubleElectron2011AMay10       -1.              DATA
+#                  154_MuEG2011AMay10                 -1.              DATA
+#   
+#   
+#    140b_SingleElectron2011Bv2         -1.              DATA
+#    141b_SingleMuon2011Bv2             -1.              DATA
+#    142b_DoubleElectron2011Bv2         -1.              DATA
+#    143b_DoubleMuon2011Bv2             -1.              DATA
+#    144b_MuEG2011Bv2                   -1.              DATA
+#   
+#   
+#    140a_SingleElectron2011Bv1         -1.              DATA
+#    141a_SingleMuon2011Bv1             -1.              DATA
+#    142a_DoubleElectron2011Bv1         -1.              DATA
+#    143a_DoubleMuon2011Bv1             -1.              DATA
+#    144a_MuEG2011Bv1                   -1.              DATA
+#   
+#   
+#                  130_SingleElectron2011Av6v2        -1.              DATA
+#                  131_SingleMuon2011Av6v2            -1.              DATA
+#                  132_DoubleElectron2011Av6v2        -1.              DATA
+#                  133_DoubleMuon2011Av6v2            -1.              DATA
+#                  134_MuEG2011Av6v2                  -1.              DATA
+#   
+#   
+#                  120_SingleElectron2011Av6          -1.              DATA
+#                  121_SingleMuon2011Av6              -1.              DATA 
+#                  122_DoubleElectron2011Av6          -1.              DATA
+#                  123_DoubleMuon2011Av6              -1.              DATA
+#                  124_MuEG2011Av6                    -1.              DATA
+#   
+#   
+#                  100_SingleElectron2011Av4          -1.              DATA
+#                  101_SingleMuon2011Av4              -1.              DATA
+#                  102_DoubleElectron2011Av4          -1.              DATA
+#                  103_DoubleMuon2011Av4              -1.              DATA
+#                  104_MuEG2011Av4                    -1.              DATA
+#   
+#
+#   321.1 +
+#   210.4 +
+#   539   +
+#   124   +
+#   930.2 
+#   
+#
+150_SingleElectron2011AMay10       -1.              DATA
+151_SingleMuon2011AMay10           -1.              DATA
+152_DoubleMuon2011AMay10           -1.              DATA
+153_DoubleElectron2011AMay10       -1.              DATA
+154_MuEG2011AMay10                 -1.              DATA
+#
+100_SingleElectron2011Av4          -1.              DATA
+101_SingleMuon2011Av4              -1.              DATA
+102_DoubleElectron2011Av4          -1.              DATA
+103_DoubleMuon2011Av4              -1.              DATA
+104_MuEG2011Av4                    -1.              DATA
+#
+160_SingleElectron2011AAug05       -1.              DATA
+161_SingleMuon2011AAug05           -1.              DATA
+162_DoubleElectron2011AAug05       -1.              DATA
+163_DoubleMuon2011AAug05           -1.              DATA
+164_MuEG2011AAug05                 -1.              DATA
+#
+120_SingleElectron2011Av6          -1.              DATA
+121_SingleMuon2011Av6              -1.              DATA
+122_DoubleElectron2011Av6          -1.              DATA
+123_DoubleMuon2011Av6              -1.              DATA
+124_MuEG2011Av6                    -1.              DATA
+#
+140_SingleElectron2011Bv1a         -1.              DATA
+141_SingleMuon2011Bv1a             -1.              DATA
+142_DoubleElectron2011Bv1a         -1.              DATA
+143_DoubleMuon2011Bv1a             -1.              DATA
+144_MuEG2011Bv1a                   -1.              DATA
+#
+#
+#
+#
+#    211.4     +
+#    929.7     +
+#    317.8     +
+#    658.9     +
+#  2,509.0   
+#  --------------  
+#   4626.8 
+#
+#
+#

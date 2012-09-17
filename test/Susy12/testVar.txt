@@ -1,0 +1,164 @@
+### Name       Min   Max   NBin    NameHR
+
+
+#### standard ####
+####     #log(q1_pT)      2      8    50    log(p_{T}^{q-high})
+####     #log(q2_pT)      2      8    50    log(p_{T}^{q-low}) 
+q1_pT            0    500   30    p_{T}^{jet-high}
+q2_pT            0    500   30    p_{T}^{jet-low}
+####     #log(M_qq)       5     10    40    log(M_{jet-jet})
+M_qq            0   2500   35    M_{jet-jet}
+DEta_qq         0     10    20    #Delta#eta_{jet-jet}
+#   M_qq            0   2000   100    M_{jet-jet}
+#   DEta_qq         0     10    50    #Delta#eta_{jet-jet}
+# CJV_30          0      5     5    CJV_{p_{T}>30}
+# met             0    300   50    MET(GeV)
+#   M_ll            0    400   20    M_{l,l}
+M_ll           10    400   70    M_{l,l}
+DPhi_ll         0   3.14159266    25    #Delta#phi_{l,l}
+#   DPhi_ll         0   3.14159265    45    #Delta#phi_{l,l}
+####     #abs(Z_ll)       0      2    40    |Z_{ll}|
+####     #log(l1_pT)      2      8    50    log(p_{T}^{l-high})
+####     #log(l2_pT)      2      8    50    log(p_{T}^{l-low}) 
+l1_pT            0    400   40    p_{T}^{l-high}
+l2_pT            0    400   40    p_{T}^{l-low}
+####     
+####     #l1_emIso/l1_pT   0      0.2    100    relEmIso_{l-high}
+####     #l2_emIso/l2_pT   0      0.2    100    relEmIso_{l-low}
+####     #l1_hadIso/l1_pT  0      0.2    100    relHadIso_{l-high}
+####     #l1_hadIso/l1_pT  0      0.2    100    relHadIso_{l-low}
+####     
+####     ## btag ##
+####     q1_bTag_trackCountingHighPurBJetTags  -5   10   100    jet^{1}_{bTag}
+####     q2_bTag_trackCountingHighPurBJetTags  -5   10   100    jet^{2}_{bTag}
+####     q2_bTag_trackCountingHighPurBJetTags+q1_bTag_trackCountingHighPurBJetTags  -20  40  30  jet^{1}_{bTag}+jet^{2}_{bTag}
+####     
+####     min(q1_bTag_trackCountingHighPurBJetTags,q2_bTag_trackCountingHighPurBJetTags) -5   10   100    min-jet_{bTag}
+####     max(q1_bTag_trackCountingHighPurBJetTags,q2_bTag_trackCountingHighPurBJetTags) -5   10   100    max-jet_{bTag}
+####     
+####     #acos((l2_pX*met_X+l2_pY*met_Y)/(sqrt(l2_pX*l2_pX+l2_pY*l2_pY)*sqrt(met_X*met_X+met_Y*met_Y)))  0   3.15    20  #phi_{lep2-met}
+####     #acos((l1_pX*met_X+l1_pY*met_Y)/(sqrt(l1_pX*l1_pX+l1_pY*l1_pY)*sqrt(met_X*met_X+met_Y*met_Y)))  0   3.15    20  #phi_{lep1-met}
+####     #acos(((l1_pX+l2_pX)*met_X+(l1_pY+l2_pY)*met_Y)/(sqrt((l1_pX+l2_pX)*(l1_pX+l2_pX)+(l1_pY+l2_pY)*(l1_pY+l2_pY))*sqrt(met_X*met_X+met_Y*met_Y)))  0    3.15  20    #phi_{leplep-met}
+sqrt((l1_pX+l2_pX+met_X+q1_pX+q2_pX)^2+(l1_pY+l2_pY+q1_pY+q2_pY+met_Y)^2)   0    500  100     p_{T}^{BALANCE}
+##
+#
+#
+### NBjets_trackCountingHighPurBJetTags_m20    0   10   10    nBjet_{-2.0}
+### NBjets_trackCountingHighPurBJetTags_m15    0   10   10    nBjet_{-1.5}
+### NBjets_trackCountingHighPurBJetTags_m10    0   10   10    nBjet_{-1.0}
+### NBjets_trackCountingHighPurBJetTags_m05    0   10   10    nBjet_{-0.5}
+### NBjets_trackCountingHighPurBJetTags_m04    0   10   10    nBjet_{-0.4}
+### NBjets_trackCountingHighPurBJetTags_m03    0   10   10    nBjet_{-0.3}
+### NBjets_trackCountingHighPurBJetTags_m02    0   10   10    nBjet_{-0.2}
+### NBjets_trackCountingHighPurBJetTags_m01    0   10   10    nBjet_{-0.1}
+#   NBjets_trackCountingHighPurBJetTags_00    0   10   10    nBjet_{0.0}
+### NBjets_trackCountingHighPurBJetTags_01    0   10   10    nBjet_{0.1}
+#   NBjets_trackCountingHighPurBJetTags_02    0   10   10    nBjet_{0.2}
+### NBjets_trackCountingHighPurBJetTags_03    0   10   10    nBjet_{0.3}
+### NBjets_trackCountingHighPurBJetTags_04    0   10   10    nBjet_{0.4}
+### NBjets_trackCountingHighPurBJetTags_05    0   10   10    nBjet_{0.5}
+### NBjets_trackCountingHighPurBJetTags_10    0   10   10    nBjet_{1.0}
+### NBjets_trackCountingHighPurBJetTags_15    0   10   10    nBjet_{1.5}
+### NBjets_trackCountingHighPurBJetTags_20    0   10   10    nBjet_{2.0}
+### NBjets_trackCountingHighPurBJetTags_30    0   10   10    nBjet_{3.0}
+# 
+### Nleptons_pT5     0   10   10    nLep_{p_T5}
+Nleptons_pT10    0   10   10    nLep_{p_T10}
+### Nleptons_pT15    0   10   10    nLep_{p_T15}
+### Nleptons_pT20    0   10   10    nLep_{p_T20}
+### Nleptons_pT25    0   10   10    nLep_{p_T25}
+### Nleptons_pT30    0   10   10    nLep_{p_T30}
+#
+####     #l1_flavour      8      18    10   flavour^{lepton}_{1}
+####     #l2_flavour      8      18    10    flavour^{lepton}_{2}
+####     
+l1_flavour*l2_flavour      100      200    100    product-flavour^{lepton}
+#pmet             0    300   50    proj-MET(GeV)
+####     
+####     #### MVA ####
+####     #LikelihoodD_JetH160   -0.01 1.01 20   LikelihoodD_{jet}
+####     #BDT_JetH160    -1     1  50    BDT_{jet}
+####     MLP_JetH160     -0.5   1.5  50    MLP_{jet}
+####     #MLPBNN_JetH160  -0.5   1.5  50    MLPBNN_{jet}
+####     #MLPCat_JetH160     -0.5   1.5  50    MLPCat_{jet}
+####     
+####     #MLPCat_LepH160     -0.5   1.5  50    MLPCat_{lep}
+####     MLP_LepH160         -1.0   1.0  50    MLP_{lep}
+####     #MLPBNN_LepH160     -0.5   1.5  50    MLPBNN_{lep}
+####     #MLPBNNCat_LepH160  -0.5   1.5  50    MLPBNNCat_{lep}
+####     
+####     
+####     #DPhi_qq         0     3.15    20    #Delta#phi_{qq}
+#
+#
+#
+#
+#     abs(q1_Eta)           0   5   10    #eta^{jet-high}
+#     abs(q2_Eta)           0   5   10    #eta^{jet-low}
+#
+#
+#
+nPV        0   20    20    nPV
+#
+#
+#
+#     NBjets_trackCountingHighPurBJetTags_05    0   10   10    nBjet_{0.5}
+#     NBjets_trackCountingHighPurBJetTags_10    0   10   10    nBjet_{1.0}
+#   NBjets_trackCountingHighPurBJetTags_15    0   10   10    nBjet_{1.5}
+#     NBjets_trackCountingHighPurBJetTags_20    0   10   10    nBjet_{2.0}
+#
+#JV_30          0      5     5    JV_{p_{T}>30}
+#
+#
+#
+#abs(pchmet)             0    800   50    proj-chMET(GeV)
+abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet)            0    300   50    min-proj-MET(GeV)
+# pmet                                                               0    300   50    MET(GeV)
+#               (jd_met*(jd_between==1*abs(jd_Delta_q1_P-1)<0.05*abs(jd_Delta_q2_P-1)<0.05)+(abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))*(!(jd_between==1*abs(jd_Delta_q1_P-1)<0.05*abs(jd_Delta_q2_P-1)<0.05)))                0      300       50      modified-jd-met      
+(jd_pmet*(jd_between==1*abs(jd_Delta_q1_P-1)<0.05*abs(jd_Delta_q2_P-1)<0.05)+(abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))*(!(jd_between==1*abs(jd_Delta_q1_P-1)<0.05*abs(jd_Delta_q2_P-1)<0.05)))               0      300       50      modified-jd-pmet     
+#
+#
+#
+#
+#    q1_bTag_trackCountingHighPurBJetTags  -5   10   100    jet^{1}_{bTag}
+#    q2_bTag_trackCountingHighPurBJetTags  -5   10   100    jet^{2}_{bTag}
+#
+#NBjets_trackCountingHighPurBJetTags_00    0   10   10    nBjet_{0.0}
+#NBjets_trackCountingHighPurBJetTags_01    0   10   10    nBjet_{0.1}
+#NBjets_trackCountingHighPurBJetTags_02    0   10   10    nBjet_{0.2}
+# NBjets_trackCountingHighPurBJetTags_20    0   10   10    nBjet_{2.0}
+#NBjets_trackCountingHighPurBJetTags_21    0   10   10    nBjet_{2.1}-highPur
+#NBjets_trackCountingHighEffBJetTags_21    0   10   10    nBjet_{2.1}-highEff
+#
+#
+#minMet                 0      300      50     min-MET(GeV)
+#NsoftMu                0       10      10     N-soft-Muons
+#               mT                     0      500      50     m_{T}(GeV/c^{2})
+#     DPhiJet_ll             0      3.15     30     #Delta#phi-min-jet-ll
+# DPhiSingleJet_ll       0      3.15     30     #Delta#phi-jet-ll
+# DPhiDoubleJet_ll       0      3.15     30     #Delta#phi-2jet-ll
+totalJV_30             0       10      10     total-JV-30
+#
+#
+#
+# jd_dphi1              0      3.15      50      jd-#Delta#phi-1
+# jd_dphi2              0      3.15      50      jd-#Delta#phi-2
+# jd_Delta_q1_P        -4        5       50      jd-#Delta-jet-1
+# jd_Delta_q2_P        -4        5       50      jd-#Delta-jet-2
+# jd_met                0      500       50      jd-met
+#
+#               jd_M_qq*(jd_between==1*abs(jd_Delta_q1_P-1)<0.05*abs(jd_Delta_q2_P-1)<0.05)+M_qq*(!(jd_between==1*abs(jd_Delta_q1_P-1)<0.05*abs(jd_Delta_q2_P-1)<0.05))               0     4000       30      modified-jd-M_{qq}
+#
+#   
+# sqrt((met_X+q1_pX-jd_q1_pX+q2_pX-jd_q2_pX)*(met_X+q1_pX-jd_q1_pX+q2_pX-jd_q2_pX)+(met_Y+q1_pY-jd_q1_pY+q2_pY-jd_q2_pY)*(met_Y+q1_pY-jd_q1_pY+q2_pY-jd_q2_pY))       0      500       50      jd-met-hand-made
+#               sqrt((met_X-q1_pX+jd_q1_pX-q2_pX+jd_q2_pX)*(met_X-q1_pX+jd_q1_pX-q2_pX+jd_q2_pX)+(met_Y-q1_pY+jd_q1_pY-q2_pY+jd_q2_pY)*(met_Y-q1_pY+jd_q1_pY-q2_pY+jd_q2_pY))       0      500       50      jd-met-opposite
+#
+#               jd_between    -2   2   10     between
+#   
+#               l1_charge*l2_charge  -2    2   10    lepton-charge
+#   
+#   
+#
+#
+#
+#

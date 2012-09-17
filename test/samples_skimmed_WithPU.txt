@@ -1,0 +1,246 @@
+# name_sample            xsection        name_human_readable
+DATA                                   -1.              DATA  
+#
+#
+#
+#
+#
+#
+##
+DYJetsToLL_TuneD6T_M-10To50_7TeV-madgraph-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1         413     DY   310*1.33 scale to M>50
+DYJetsToLL_TuneD6T_M-50_7TeV-madgraph-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1                 3048     DY
+#DYJetsToLL_TuneZ2_M-50_7TeV-madgraph-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v3                     3048    DY
+#DYToEE_M-20_TuneZ2_7TeV-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO                             1666       DY
+#DYToMuMu_M-20_TuneZ2_7TeV-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO                     1666       DY
+#DYToTauTau_M-20_TuneZ2_7TeV-pythia6-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO     1666       DY
+##
+##TTJets_TuneZ2_7TeV-madgraph-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO         165      ttbar
+TTTo2L2Nu2B_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO         17.5        ttbar
+TTToLNu2Q2B_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO       72.8      ttbar
+##
+TToBLNu_TuneZ2_s-channel_7TeV-madgraph_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO          1.5      top
+TToBLNu_TuneZ2_t-channel_7TeV-madgraph_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO         21.0      top
+TToBLNu_TuneZ2_tW-channel_7TeV-madgraph_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO        10.6      top
+##
+WJetsToLNu_TuneZ2_7TeV-madgraph-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO                  31314     Wln
+##
+WWTo2L2Nu_TuneZ2_7TeV-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO                     3.308    VV        WW2l2n
+##WWtoAnything_TuneZ2_7TeV-pythia6-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO         43.0     WW
+##WZTo3LNu_TuneZ2_7TeV-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO                             0.867     WZ3ln
+WZtoAnything_TuneZ2_7TeV-pythia6-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO         18.2       VV        WZ
+ZZtoAnything_TuneZ2_7TeV-pythia6-tauola_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO         5.9        VV        ZZ
+##
+QCD_Pt-20_MuEnrichedPt-15_TuneZ2_7TeV-pythia6_Fall10-START38_V12-v1           8.47e4   QCD     QCDmu  
+QCD_Pt-20to30_BCtoE_TuneZ2_7TeV-pythia6_Fall10-START38_V12-v1                 1.32e5   QCD     QCDBC
+QCD_Pt-20to30_EMEnriched_TuneZ2_7TeV-pythia6_Fall10-START38_V12-v1            2.45e6   QCD     QCDEM
+QCD_Pt-30to80_BCtoE_TuneZ2_7TeV-pythia6_Fall10-START38_V12-v1                 1.37e5   QCD     QCDBC
+QCD_Pt-30to80_EMEnriched_TuneZ2_7TeV-pythia6_Fall10-START38_V12-v1            3.87e6   QCD     QCDEM
+QCD_Pt-80to170_BCtoE_TuneZ2_7TeV-pythia6_Fall10-START38_V12-v1                9.63e3   QCD     QCDBC
+QCD_Pt-80to170_EMEnriched_TuneZ2_7TeV-pythia6_Fall10-START38_V12-v1           1.40e5   QCD     QCDEM
+##
+##
+#
+
+
+##              WW->ffff       BR WWffff
+##              TauNu - QQ      (0.1125)*(0.6770)*2
+##              LNu - QQ        (0.1075+0.1057)*(0.6770)*2
+##              TauNu - LNu     (0.1075+0.1057)*(0.1125)*2
+##              TauNu - TauNu   (0.1125)*(0.1125)
+##              LNu - LNu       (0.1075+0.1057)*(0.1075+0.1057)
+
+
+
+### Mass 120 ###
+##     Xsection     BR HWW
+## ggh 16.63        1.43e-01
+## qqh 1.269        1.43e-01
+#
+### Mass 130 ###
+##     Xsection     BR HWW
+## ggH 14.12        3.05e-01
+## qqH 1.154        3.05e-01
+#
+### Mass 140 ###
+##     Xsection     BR HWW
+## ggH 12.13        5.04e-01
+## qqH 1.052         5.04e-01
+#
+### Mass 150 ###
+##     Xsection     BR HWW
+## ggH 10.50        6.99e-01
+## qqH 0.9617       6.99e-01
+#
+### Mass 160 ###
+##     Xsection     BR HWW
+## ggH 9.080        9.09e-01
+## qqH 0.8787       9.09e-01
+#
+### Mass 200 ###
+##     Xsection     BR HWW
+## ggH 5.249        7.41e-01
+## qqH 0.6371       7.41e-01
+#
+### Mass 250 ###
+##     Xsection     BR HWW
+## ggH 3.312        7.01e-01
+## qqH 0.4304       7.01e-01
+#
+### Mass 300 ###
+##     Xsection     BR HWW
+## ggH 2.418        6.92e-01
+## qqH 0.3010       6.92e-01
+#
+### Mass 400 ###
+##     Xsection     BR HWW
+## ggH 2.035        5.82e-01 
+## qqH 0.1619 	    5.82e-01 
+#
+### Mass 600 ###
+##     Xsection     BR HWW
+## ggH 0.3275        5.58e-01
+## qqH 0.05763       5.58e-01
+#
+
+
+
+
+### Mass 120 ###
+##     Xsection     BR HWW
+## ggh 16.63        1.43e-01
+## qqh 1.269        1.43e-01
+#
+##              WW->ffff       BR WWffff
+##              TauNu - QQ      (0.1125)*(0.6770)*2
+##              LNu - QQ        (0.1075+0.1057)*(0.6770)*2
+##              TauNu - LNu     (0.1075+0.1057)*(0.1125)*2
+##              TauNu - TauNu   (0.1125)*(0.1125)
+##              LNu - LNu       (0.1075+0.1057)*(0.1075+0.1057)
+#GluGluToHToWWToLNuTauNu_M-120_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	1.141e-01          ggH120
+#GluGluToHToWWTo2Tau2Nu_M-120_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	3.010e-02          ggH120
+#GluGluToHToWWTo2L2Nu_M-120_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	1.081e-01          ggH120
+#VBF_HToWWToLNuTauNu_M-120_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	8.705e-03           qqH120
+#VBF_HToWWTo2Tau2Nu_M-120_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	2.297e-03           qqH120
+#VBF_HToWWTo2L2Nu_M-120_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	8.2485e-03          qqH120
+
+
+
+### Mass 130 ###
+##     Xsection     BR HWW
+## ggH 14.12        3.05e-01
+## qqH 1.154        3.05e-01
+#
+##              WW->ffff       BR WWffff
+##              TauNu - LNu     (0.1075+0.1057)*(0.1125)*2
+##              TauNu - TauNu   (0.1125)*(0.1125)
+##              LNu - LNu       (0.1075+0.1057)*(0.1075+0.1057)
+
+#GluGluToHToWWToLNuTauNu_M-130_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.206588          ggH130
+#GluGluToHToWWTo2Tau2Nu_M-130_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0545054         ggH130
+#GluGluToHToWWTo2L2Nu_M-130_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.195753          ggH130
+#VBF_HToWWToLNuTauNu_M-130_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.016884             qqH130
+#VBF_HToWWTo2Tau2Nu_M-130_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.00445462           qqH130
+#VBF_HToWWTo2L2Nu_M-130_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0159985            qqH130
+
+
+
+### Mass 140 ###
+##     Xsection     BR HWW
+## ggH 12.13        5.04e-01
+## qqH 1.052         5.04e-01
+#
+#VBF_HToWWTo2L2Nu_M-140_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0241002           qqH140
+
+
+
+### Mass 150 ###
+##     Xsection     BR HWW
+## ggH 10.50        6.99e-01
+## qqH 0.9617       6.99e-01
+#
+#GluGluToHToWWToLNuTauNu_M-150_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.352076           ggH150
+#GluGluToHToWWTo2Tau2Nu_M-150_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0928905          ggH150
+#GluGluToHToWWTo2L2Nu_M-150_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.333611           ggH150
+#VBF_HToWWToLNuTauNu_M-150_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0322468           qqH150
+#VBF_HToWWTo2Tau2Nu_M-150_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.00850789          qqH150
+#VBF_HToWWTo2L2Nu_M-150_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0305556           qqH150
+
+
+
+### Mass 160 ###
+##     Xsection     BR HWW
+## ggH 9.080        9.09e-01
+## qqH 0.8787       9.09e-01
+#
+GluGluToHToWWToLNuTauNu_M-160_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.395931           ggH160
+GluGluToHToWWTo2Tau2Nu_M-160_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.104461           ggH160
+GluGluToHToWWTo2L2Nu_M-160_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.375167           ggH160
+VBF_HToWWToLNuTauNu_M-160_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0383155           qqH160
+VBF_HToWWTo2L2Nu_M-160_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.036306           qqH160
+
+
+
+### Mass 200 ###
+##     Xsection     BR HWW
+## ggH 5.249        7.41e-01
+## qqH 0.6371       7.41e-01
+#
+#GluGluToHToWWToLNuTauNu_M-200_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.18658           ggH200
+#GluGluToHToWWTo2Tau2Nu_M-200_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0492266         ggH200
+#GluGluToHToWWTo2L2Nu_M-200_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.176795          ggH200
+#VBF_HToWWToLNuTauNu_M-200_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0226462           qqH200
+#VBF_HToWWTo2Tau2Nu_M-200_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0059749           qqH200
+#VBF_HToWWTo2L2Nu_M-200_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0214585           qqH200
+
+
+
+
+### Mass 250 ###
+##     Xsection     BR HWW
+## ggH 3.312        7.01e-01
+## qqH 0.4304       7.01e-01
+#
+#GluGluToHToWWToLNuTauNu_M-250_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.111373           ggH250
+#GluGluToHToWWTo2Tau2Nu_M-250_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0293842          ggH250
+#GluGluToHToWWTo2L2Nu_M-250_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.105532           ggH250
+#VBF_HToWWToLNuTauNu_M-250_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0145941           qqH250
+#VBF_HToWWTo2Tau2Nu_M-250_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.00385046          qqH250
+#VBF_HToWWTo2L2Nu_M-250_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0138287           qqH250
+
+
+
+### Mass 300 ###
+##     Xsection     BR HWW
+## ggH 2.418        6.92e-01
+## qqH 0.3010       6.92e-01
+#
+### Mass 400 ###
+##     Xsection     BR HWW
+## ggH 2.035        5.82e-01 
+## qqH 0.1619 	    5.82e-01 
+#
+#GluGluToHToWWToLNuTauNu_M-400_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0568142           ggH400
+#GluGluToHToWWTo2Tau2Nu_M-400_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0149897           ggH400
+#GluGluToHToWWTo2L2Nu_M-400_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.0538346           ggH400
+#VBF_HToWWToLNuTauNu_M-400_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	        0.00452001          qqH400
+#VBF_HToWWTo2Tau2Nu_M-400_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	        0.00119255          qqH400
+#VBF_HToWWTo2L2Nu_M-400_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	        0.00428296          qqH400
+
+
+
+
+### Mass 600 ###
+##     Xsection     BR HWW
+## ggH 0.3275        5.58e-01
+## qqH 0.05763       5.58e-01
+#
+#GluGluToHToWWToLNuTauNu_M-600_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.00876628           ggH600
+#GluGluToHToWWTo2Tau2Nu_M-600_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.00231287           ggH600
+#GluGluToHToWWTo2L2Nu_M-600_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	0.00830654           ggH600
+#VBF_HToWWToLNuTauNu_M-600_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	        0.0015426            qqH600
+#VBF_HToWWTo2Tau2Nu_M-600_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	        0.000406994          qqH600
+#VBF_HToWWTo2L2Nu_M-600_7TeV-powheg-pythia6_Fall10-E7TeV_ProbDist_2010Data_BX156_START38_V12-v1_GEN-SIM-RECO 	        0.0014617            qqH600
+##
+
+
+

@@ -1,0 +1,22 @@
+### Name       Min   Max   NBin    NameHR        Name       Min   Max   NBin    NameHR
+#   X                                            Y
+#   2D distributions
+#
+#
+#### standard ####
+(jd_met*(abs(jd_Delta_q1_P-1)<0.10*abs(jd_Delta_q2_P-1)<0.10)+(abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))*(!(abs(jd_Delta_q1_P-1)<0.10*abs(jd_Delta_q2_P-1)<0.10)))               0      300      100      modified-jd-met             pmet            0    300   100    MET(GeV)
+(jd_met*(abs(jd_Delta_q1_P-1)<0.10*abs(jd_Delta_q2_P-1)<0.10)+(abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))*(!(abs(jd_Delta_q1_P-1)<0.10*abs(jd_Delta_q2_P-1)<0.10)))               0      300      100      modified-jd-met             abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet)            0    300   100    min-proj-MET(GeV)
+pmet 0    300   100    MET      abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet)         0    300   100    min-proj-MET
+jd_Delta_q1_P       -10       10       50      jd-#Delta-jet-1    jd_Delta_q2_P       -10       10       50      jd-#Delta-jet-2
+sqrt((met_X-q1_pX+jd_q1_pX-q2_pX+jd_q2_pX)*(met_X-q1_pX+jd_q1_pX-q2_pX+jd_q2_pX)+(met_Y-q1_pY+jd_q1_pY-q2_pY+jd_q2_pY)*(met_Y-q1_pY+jd_q1_pY-q2_pY+jd_q2_pY))       0      500      100      jd-met-opposite                  (jd_met*(abs(jd_Delta_q1_P-1)<0.10*abs(jd_Delta_q2_P-1)<0.10)+(abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))*(!(abs(jd_Delta_q1_P-1)<0.10*abs(jd_Delta_q2_P-1)<0.10)))               0      300      100      modified-jd-met  
+#
+#
+#   DEta_qq         0     10    20    #Delta#eta_{jet-jet}            M_qq            0   2000   30    M_{jet-jet}
+#   DEta_qq         0     10    20    #Delta#eta_{jet-jet}            CJV_30          0      5     5    CJV_{p_{T}>30}
+#   met             0    150    20    MET(GeV)                        M_ll            0    400   20    M_{l,l}
+#   met             0    200    30    MET(GeV)                        pmet            0    200   30    proj-MET(GeV)
+#   l2_pT           0    300   30    p_{T}^{l-low}                    M_ll            0    400   20    M_{l,l}
+#   l1_pT           0    300   30    p_{T}^{l-high}                   M_ll            0    400   20    M_{l,l}
+
+
+

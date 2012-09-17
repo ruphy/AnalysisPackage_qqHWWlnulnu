@@ -1,0 +1,17 @@
+# list of samples
+#
+#
+qqH   1
+ggH   1
+#
+#
+W+jets  0
+ggWW    0
+VV      0
+top   0
+DY    0
+#
+#
+DATA -1
+#
+#

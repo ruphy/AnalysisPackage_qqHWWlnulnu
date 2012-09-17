@@ -1,0 +1,7 @@
+### Name       Min   Max   NBin    NameHR
+
+
+#### standard ####
+####     
+l1_flavour*l2_flavour      100      200    100    product-flavour^{lepton}
+###

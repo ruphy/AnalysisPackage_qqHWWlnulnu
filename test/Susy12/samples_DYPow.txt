@@ -1,0 +1,174 @@
+# name_sample            xsection        name_human_readable
+DATA                               -1                 DATA
+# # 120_SingleElectron2011Av6          -1.              DATA
+# # 121_SingleMuon2011Av6              -1.              DATA
+# # 122_DoubleElectron2011Av6          -1.              DATA
+# # 123_DoubleMuon2011Av6              -1.              DATA
+# # 124_MuEG2011Av6                    -1.              DATA
+# 130_SingleElectron2011Av6v2        -1.              DATA
+# 131_SingleMuon2011Av6v2            -1.              DATA
+# 132_DoubleElectron2011Av6v2        -1.              DATA
+# 133_DoubleMuon2011Av6v2            -1.              DATA
+# 134_MuEG2011Av6v2                  -1.              DATA
+# 150_SingleElectron2011AMay10       -1.              DATA
+# 151_SingleMuon2011AMay10           -1.              DATA
+# 152_DoubleMuon2011AMay10           -1.              DATA
+# 153_DoubleElectron2011AMay10       -1.              DATA
+# 154_MuEG2011AMay10                 -1.              DATA
+# 160_SingleElectron2011AAug05       -1.              DATA
+# 161_SingleMuon2011AAug05           -1.              DATA
+# 162_DoubleElectron2011AAug05       -1.              DATA
+# 163_DoubleMuon2011AAug05           -1.              DATA
+# 164_MuEG2011AAug05                 -1.              DATA
+#
+#
+#
+030_DYtoElEl                       0.0567686049     DY
+033_DY10toElEl                     1.6292217438     DY    DY-low
+031_DYtoMuMu                       0.0565481502     DY
+034_DY10toMuMu                     1.5767956975     DY    DY-low
+#
+032_DYtoTauTau                     0.0835612165     DY-tautau DY
+035_DY10toTauTau                   1.5713636364     DY-tautau DY    DY-low 
+#
+#   010_TTJetsMad                      0.0432460989     top ttbar
+019_TTTo2L2Nu2B                    0.0015977756     top ttbar
+#
+011_TtWFullDR                      0.0096636747     top
+012_TbartWFullDR                   0.0097162413     top
+013_TtFull                         0.0107482467     top
+014_TbartFull                      0.0116462861     top
+015_TsFull                         0.0122705994     top
+016_TbarsFull                      0.0104362951     top
+#
+074_WZJetsMad                      0.0005041117     VV
+075_ZZJetsMad                      0.0002712239     VV
+#   070_WZFull                         0.0042670488     VV    WZ/ZZ    WZ
+#   071_ZZFull                         0.0018314734     VV    WZ/ZZ    ZZ
+#   072_GluGluZZ2L2L                   0.0000173000     VV    WZ/ZZ    ZZ
+#   073_GluGluZZ4L                     0.0000123014     VV    WZ/ZZ    ZZ
+#
+000_WWJets2LMad                    0.0037693105     VV    WW
+001_GluGluToWWTo4L                 0.0013910103     ggWW  WW
+#
+080_WJetsToLNuMad                  0.3849171055     W+jets   W
+081_VGamma                         0.1545118876     W+jets   Vg
+#
+# 1120_ggToH120toWWto2L2Nu           0.0010091551     ggH
+# 1130_ggToH130toWWto2L2Nu           0.0018283314     ggH
+# 1140_ggToH140toWWto2L2Nu           0.0026134876     ggH
+# 1150_ggToH150toWWto2L2Nu           0.0031192611     ggH
+1160_ggToH160toWWto2L2Nu           0.0036198032     ggH
+# 1170_ggToH170toWWto2L2Nu           0.0032840815     ggH
+# 1180_ggToH180toWWto2L2Nu           0.0026720611     ggH
+# 1190_ggToH190toWWto2L2Nu           0.0020133730     ggH 
+# 1200_ggToH200toWWto2L2Nu           0.0016564690     ggH
+# 1250_ggToH250toWWto2L2Nu           0.0010241611     ggH
+# 1300_ggToH300toWWto2L2Nu           0.0007100710     ggH
+# 1350_ggToH350toWWto2L2Nu           0.0006536898     ggH
+# 1400_ggToH400toWWto2L2Nu           0.0005009410     ggH
+# 1450_ggToH450toWWto2L2Nu           0.0003200669     ggH
+# 1500_ggToH500toWWto2L2Nu           0.0002000491     ggH
+# 1550_ggToH550toWWto2L2Nu           0.0001254853     ggH
+# 1600_ggToH600toWWto2L2Nu           0.0000791110     ggH
+#
+# 2120_ggToH120toWWtoLNuTauNu        0.0010091643     ggH
+# 2130_ggToH130toWWtoLNuTauNu        0.0018442773     ggH
+# 2140_ggToH140toWWtoLNuTauNu        0.0025956197     ggH
+# 2150_ggToH150toWWtoLNuTauNu        0.0031193178     ggH
+2160_ggToH160toWWtoLNuTauNu        0.0035011319     ggH
+# 2170_ggToH170toWWtoLNuTauNu        0.0031764791     ggH
+# 2180_ggToH180toWWtoLNuTauNu        0.0026719396     ggH
+# 2190_ggToH190toWWtoLNuTauNu        0.0019737799     ggH
+# 2200_ggToH200toWWtoLNuTauNu        0.0016564841     ggH
+# 2250_ggToH250toWWtoLNuTauNu        0.0010137122     ggH
+# 2300_ggToH300toWWtoLNuTauNu        0.0007100516     ggH
+# 2350_ggToH350toWWtoLNuTauNu        0.0006537136     ggH
+# 2400_ggToH400toWWtoLNuTauNu        0.0005009319     ggH
+# 2450_ggToH450toWWtoLNuTauNu        0.0003200553     ggH
+# 2500_ggToH500toWWtoLNuTauNu        0.0002000418     ggH
+# 2550_ggToH550toWWtoLNuTauNu        0.0001254762     ggH
+# 2600_ggToH600toWWtoLNuTauNu        0.0000791074     ggH
+#
+# 3120_ggToH120toWWto2Tau2Nu         0.0005036730     ggH
+# 3130_ggToH130toWWto2Tau2Nu         0.0009848455     ggH
+# 3140_ggToH140toWWto2Tau2Nu         0.0013717579     ggH
+# 3150_ggToH150toWWto2Tau2Nu         0.0015602269     ggH
+3160_ggToH160toWWto2Tau2Nu         0.0017511001     ggH
+# 3170_ggToH170toWWto2Tau2Nu         0.0017227090     ggH
+# 3180_ggToH180toWWto2Tau2Nu         0.0013541897     ggH
+# 3190_ggToH190toWWto2Tau2Nu         0.0009873086     ggH
+# 3200_ggToH200toWWto2Tau2Nu         0.0008688014     ggH
+# 3250_ggToH250toWWto2Tau2Nu         0.0005174620     ggH
+# 3300_ggToH300toWWto2Tau2Nu         0.0003723506     ggH
+# 3350_ggToH350toWWto2Tau2Nu         0.0003273203     ggH
+# 3400_ggToH400toWWto2Tau2Nu         0.0002635197     ggH
+# 3450_ggToH450toWWto2Tau2Nu         0.0001715166     ggH
+# 3500_ggToH500toWWto2Tau2Nu         0.0001071895     ggH
+# 3550_ggToH550toWWto2Tau2Nu         0.0000636560     ggH
+# 3600_ggToH600toWWto2Tau2Nu         0.0000428766     ggH
+#
+# 4120_vbfToH120toWWto2L2Nu          0.0000764791     qqH
+# 4130_vbfToH130toWWto2L2Nu          0.0001483693     qqH
+# 4140_vbfToH140toWWto2L2Nu          0.0002230781     qqH
+# 4150_vbfToH150toWWto2L2Nu          0.0002917482     qqH
+4160_vbfToH160toWWto2L2Nu          0.0003359096     qqH
+# 4170_vbfToH170toWWto2L2Nu          0.0004050701     qqH
+# 4180_vbfToH180toWWto2L2Nu          0.0002939399     qqH
+# 4190_vbfToH190toWWto2L2Nu          0.0002298619     qqH
+# 4200_vbfToH200toWWto2L2Nu          0.0001984308     qqH
+# 4210_vbfToH210toWWto2L2Nu          0.0003604588     qqH
+# 4220_vbfToH220toWWto2L2Nu          0.0003374914     qqH
+# 4230_vbfToH230toWWto2L2Nu          0.0003021148     qqH
+# 4250_vbfToH250toWWto2L2Nu          0.0001265270     qqH
+# 4300_vbfToH300toWWto2L2Nu          0.0000873839     qqH
+# 4350_vbfToH350toWWto2L2Nu          0.0000610556     qqH
+# 4400_vbfToH400toWWto2L2Nu          0.0000401398     qqH
+# 4450_vbfToH450toWWto2L2Nu          0.0000292107     qqH
+# 4500_vbfToH500toWWto2L2Nu          0.0000220554     qqH
+# 4550_vbfToH550toWWto2L2Nu          0.0000174782     qqH
+# 4600_vbfToH600toWWto2L2Nu          0.0000139747     qqH
+#
+# 5120_vbfToH120toWWtoLNuTauNu       0.0000764763     qqH
+# 5130_vbfToH130toWWtoLNuTauNu       0.0001483923     qqH
+# 5140_vbfToH140toWWtoLNuTauNu       0.0002230598     qqH
+# 5150_vbfToH150toWWtoLNuTauNu       0.0002822004     qqH
+5160_vbfToH160toWWtoLNuTauNu       0.0003359279     qqH
+# 5170_vbfToH170toWWtoLNuTauNu       0.0003313941     qqH
+# 5180_vbfToH180toWWtoLNuTauNu       0.0002921980     qqH
+# 5190_vbfToH190toWWtoLNuTauNu       0.0002284872     qqH 
+# 5200_vbfToH200toWWtoLNuTauNu       0.0002034265     qqH
+# 5210_vbfToH210toWWtoLNuTauNu       0.0003604719     qqH
+# 5220_vbfToH220toWWtoLNuTauNu       0.0003295283     qqH
+# 5230_vbfToH230toWWtoLNuTauNu       0.0003022633     qqH
+# 5250_vbfToH250toWWtoLNuTauNu       0.0001265201     qqH
+# 5300_vbfToH300toWWtoLNuTauNu       0.0000873967     qqH
+# 5350_vbfToH350toWWtoLNuTauNu       0.0001520378     qqH
+# 5400_vbfToH400toWWtoLNuTauNu       0.0000403922     qqH
+# 5450_vbfToH450toWWtoLNuTauNu       0.0000292032     qqH
+# 5500_vbfToH500toWWtoLNuTauNu       0.0000227661     qqH
+# 5550_vbfToH550toWWtoLNuTauNu       0.0000187541     qqH
+# 5600_vbfToH600toWWtoLNuTauNu       0.0000138171     qqH
+#
+# 6120_vbfToH120toWWto2Tau2Nu        0.0000397705     qqH
+# 6130_vbfToH130toWWto2Tau2Nu        0.0000776251     qqH
+# 6140_vbfToH140toWWto2Tau2Nu        0.0001110787     qqH
+# 6150_vbfToH150toWWto2Tau2Nu        0.0001419808     qqH
+6160_vbfToH160toWWto2Tau2Nu        0.0001675194     qqH
+# 6170_vbfToH170toWWto2Tau2Nu        0.0001785504     qqH
+# 6180_vbfToH180toWWto2Tau2Nu        0.0001568966     qqH
+# 6190_vbfToH190toWWto2Tau2Nu        0.0001146872     qqH
+# 6200_vbfToH200toWWto2Tau2Nu        0.0000983338     qqH
+# 6210_vbfToH210toWWto2Tau2Nu        0.0000892126     qqH
+# 6220_vbfToH220toWWto2Tau2Nu        0.0000897953     qqH
+# 6230_vbfToH230toWWto2Tau2Nu        0.0000746405     qqH
+# 6250_vbfToH250toWWto2Tau2Nu        0.0000637035     qqH
+# 6300_vbfToH300toWWto2Tau2Nu        0.0000472543     qqH
+# 6350_vbfToH350toWWto2Tau2Nu        0.0000309812     qqH
+# 6400_vbfToH400toWWto2Tau2Nu        0.0000200624     qqH
+# 6450_vbfToH450toWWto2Tau2Nu        0.0000146140     qqH
+# 6500_vbfToH500toWWto2Tau2Nu        0.0000111208     qqH
+# 6550_vbfToH550toWWto2Tau2Nu        0.0000091388     qqH
+# 6600_vbfToH600toWWto2Tau2Nu        0.0000073233     qqH
+#
+#

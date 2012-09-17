@@ -1,0 +1,65 @@
+####################################################################
+#### name_sample            xsection        name_human_readable ####
+####################################################################
+#
+#
+################################################################################################################################
+DATA                                -1              DATA
+################################################################################################################################
+#
+#
+#
+#
+####################################################################################
+#
+222_DYtt                                  effW*triggW*baseW/5.063             ZJets               DYtautau-emb
+#
+step3_000_WWJets2LMad                     baseW*effW*triggW*puWobs             WW
+step3_001_GluGluToWWTo4L                  baseW*effW*triggW*puWobs             WW
+#
+019_TTTo2L2Nu2B                           baseW*effW*triggW*puWobs*((sameflav*1.09+(!sameflav)*1.09))        Top
+step3_011_TtWFullDR                       baseW*effW*triggW*puWobs*((sameflav*1.09+(!sameflav)*1.09))        Top
+step3_012_TbartWFullDR                    baseW*effW*triggW*puWobs*((sameflav*1.09+(!sameflav)*1.09))        Top
+#
+#
+step3_036_DY10toLLMad                     baseW*effW*triggW*puWobs*((mctruth==1)*1.10+(mctruth==0)*1.06)*(mctruth!=2)    ZJets     ZJets-eemm
+037_DY50toLLMad                           baseW*effW*triggW*puWobs*((mctruth==1)*1.10+(mctruth==0)*1.06)*(mctruth!=2)    ZJets     ZJets-eemm
+#
+#
+074_WZJetsMad                             baseW*effW*triggW*puWobs             VV  
+075_ZZJetsMad                             baseW*effW*triggW*puWobs             VV  
+078_WZTo2L2QMad                           baseW*effW*triggW*puWobs             VV  
+079_ZZTo2L2QMad                           baseW*effW*triggW*puWobs             VV  
+# 
+082_WGstarToElNuMad                       baseW*effW*triggW*puWobs        WJets     Wg 
+083_WGstarToMuNuMad                       baseW*effW*triggW*puWobs        WJets     Wg 
+084_WGstarToTauNuMad                      baseW*effW*triggW*puWobs        WJets     Wg 
+085_WgammaToLNuG                          baseW*effW*triggW*puWobs        WJets     Wg 
+#
+step3_all_looseloose_5.1fb                fake2W/5.063                 WJets
+#
+#
+step3_1125_ggToH125toWWTo2LAndTau2Nu      baseW*effW*triggW*puWobs         H-125    ggH-125
+2125_vbfToH125toWWTo2LAndTau2Nu           baseW*effW*triggW*puWobs         H-125    qqH-125
+3125_wzttH125ToWW                         baseW*effW*triggW*puWobs         H-125    VH-125
+#
+step3_1125_ggToH125toWWTo2LAndTau2Nu      baseW*effW*triggW*puWobs         H-125    VHggH-125
+3125_wzttH125ToWW                         baseW*effW*triggW*puWobs         H-125    VHggH-125
+#
+#
+990_T2tt                                  1                                                                                             T2tt
+#
+990_T2tt                                  1*(susyMLSP>30)*(susyMLSP<70)*(susyMstop>300)*(susyMstop<400)                                     T2tt-350-70
+990_T2tt                                  1*(susyMLSP>30)*(susyMLSP<70)*(susyMstop>400)*(susyMstop<600)                                     T2tt-500-70
+#
+990_T2tt                                  1*(susyMLSP>80)*(susyMLSP<120)*(susyMstop>300)*(susyMstop<400)                                    T2tt-350-100
+990_T2tt                                  1*(susyMLSP>80)*(susyMLSP<120)*(susyMstop>400)*(susyMstop<600)                                    T2tt-500-100
+#
+990_T2tt                                  1*(susyMLSP>180)*(susyMLSP<220)*(susyMstop>400)*(susyMstop<600)                                   T2tt-500-200
+990_T2tt                                  1*(susyMLSP>-20)*(susyMLSP<20)*(susyMstop>150)*(susyMstop<250)                                    T2tt-200-0
+#
+#
+# 991_T2bw                                  1                                        T2bw
+#
+#
+

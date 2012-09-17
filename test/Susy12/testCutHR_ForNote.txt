@@ -1,0 +1,91 @@
+###################################
+#### Cut for Analysis workflow ####
+###################################
+#
+####################################
+#
+# all
+#
+two jets
+WW level
+WW level - #Delta#phi cut applied
+VBF cut
+Lepton cut - lowMass
+B-veto - lowMass
+Lepton cut - highMass
+B-veto - highMass
+for DY purity under Z peak ee
+for DY purity under Z peak #mu#mu
+#
+####################################
+#
+# mumu
+#
+~ #mu#mu all
+~ #mu#mu two jets
+~ #mu#mu \met and m_{\ell\ell} > 12   
+~ #mu#mu Z veto                
+~ #mu#mu p\met>40/20
+~ #mu#mu \Delta\phi < 165    
+~ #mu#mu b-tag veto            
+~ #mu#mu CJV
+~ #mu#mu leptons cut
+~ #mu#mu \Delta\eta(j,j)       
+~ #mu#mu m_{jj} > 450
+####################################
+#
+# mue
+#
+~ #mue all
+~ #mue two jets
+~ #mue \met and m_{\ell\ell} > 12   
+~ #mue Z veto                
+~ #mue p\met>40/20
+~ #mue \Delta\phi < 165    
+~ #mue b-tag veto            
+~ #mue CJV
+~ #mue leptons cut
+~ #mue \Delta\eta(j,j)       
+~ #mue m_{jj} > 450
+####################################
+#
+# emu
+#
+e#mu all
+e#mu two jets
+e#mu \met and m_{\ell\ell} > 12   
+e#mu Z veto                
+e#mu p\met>40/20
+e#mu \Delta\phi < 165    
+e#mu b-tag veto            
+e#mu CJV
+e#mu leptons cut
+e#mu \Delta\eta(j,j)       
+e#mu m_{jj} > 450
+####################################
+#
+# ee
+#
+ee all
+ee two jets
+ee \met and m_{\ell\ell} > 12   
+ee Z veto                
+ee p\met>40/20
+ee \Delta\phi < 165    
+ee b-tag veto            
+ee CJV
+ee leptons cut
+ee \Delta\eta(j,j)       
+ee m_{jj} > 450
+#
+#
+#
+#
+#
+two jets mll > 50
+~ #mu#mu two jets mll > 50
+~ #mue two jets mll > 50
+~ emu two jets mll > 50
+~ ee two jets mll > 50
+#
+#

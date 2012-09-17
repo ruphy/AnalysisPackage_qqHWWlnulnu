@@ -1,0 +1,7 @@
+detajj       #Delta#eta_{jetjet}                           0          0       0       -999         -999 
+mjj          m_{jet-jet}                                   1          0       0       -999         -999 
+mll          m_{ll}                                        2          0       0       -999         -999 
+MR2j         mR_{jet-jet}                                  3          0       0       -999         -999 
+MTR2j        m_{T}R_{jet-jet}                              4          0       0       -999         -999 
+R2j          R_{jet-jet}                                   5          0       0       -999         -999 
+events       event                                         6          0       0       -999         -999 

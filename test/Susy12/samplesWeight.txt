@@ -1,0 +1,161 @@
+# name_sample            PUindex
+#
+Summer11_DY50toLLMadD6T             1
+#
+Summer11_WWJets2LMad                1
+Summer11_GluGluToWWTo4L             1
+#
+Summer11_TTJetsMad                  1
+Summer11_TtWFullDR                  1
+Summer11_TbartWFullDR               1
+Summer11_TtFull                     1
+Summer11_TbartFull                  1
+Summer11_TsFull                     1
+Summer11_TbarsFull                  1
+# 
+Summer11_DYtoElEl                   1
+Summer11_DYtoMuMu                   1
+Summer11_DYtoTauTau                 1
+Summer11_DY10toElEl                 2
+Summer11_DY10toMuMu                 2
+Summer11_DY10toTauTau               2
+# 
+Summer11_WZFull                     1
+Summer11_ZZFull                     1
+Summer11_GluGluZZ2L2L               1
+Summer11_GluGluZZ4L                 1
+#
+Summer11_WJetsToLNuMad              1
+Summer11_VGamma                     1
+#
+#
+# 
+Summer11_ggToH120toWWto2L2Nu        2
+Summer11_ggToH130toWWto2L2Nu        2
+Summer11_ggToH140toWWto2L2Nu        2
+Summer11_ggToH150toWWto2L2Nu        2
+Summer11_ggToH160toWWto2L2Nu        2
+Summer11_ggToH170toWWto2L2Nu        2
+Summer11_ggToH180toWWto2L2Nu        2
+Summer11_ggToH190toWWto2L2Nu        2
+Summer11_ggToH200toWWto2L2Nu        1
+Summer11_ggToH210toWWto2L2Nu        2
+Summer11_ggToH220toWWto2L2Nu        2
+Summer11_ggToH230toWWto2L2Nu        2
+Summer11_ggToH250toWWto2L2Nu        2
+Summer11_ggToH300toWWto2L2Nu        2
+Summer11_ggToH350toWWto2L2Nu        2
+Summer11_ggToH400toWWto2L2Nu        2
+Summer11_ggToH450toWWto2L2Nu        2
+Summer11_ggToH500toWWto2L2Nu        2
+Summer11_ggToH550toWWto2L2Nu        2
+Summer11_ggToH600toWWto2L2Nu        2
+#
+Summer11_ggToH120toWWtoLNuTauNu     1
+Summer11_ggToH130toWWtoLNuTauNu     1
+Summer11_ggToH140toWWtoLNuTauNu     1
+Summer11_ggToH150toWWtoLNuTauNu     1
+Summer11_ggToH160toWWtoLNuTauNu     1
+Summer11_ggToH170toWWtoLNuTauNu     1
+Summer11_ggToH180toWWtoLNuTauNu     1
+Summer11_ggToH190toWWtoLNuTauNu     1
+Summer11_ggToH200toWWtoLNuTauNu     1
+Summer11_ggToH210toWWtoLNuTauNu     1
+Summer11_ggToH220toWWtoLNuTauNu     1
+Summer11_ggToH230toWWtoLNuTauNu     1
+Summer11_ggToH250toWWtoLNuTauNu     1
+Summer11_ggToH300toWWtoLNuTauNu     1
+Summer11_ggToH350toWWtoLNuTauNu     1
+Summer11_ggToH400toWWtoLNuTauNu     1
+Summer11_ggToH450toWWtoLNuTauNu     1
+Summer11_ggToH500toWWtoLNuTauNu     1
+Summer11_ggToH550toWWtoLNuTauNu     1
+Summer11_ggToH600toWWtoLNuTauNu     1
+#
+Summer11_ggToH120toWWto2Tau2Nu      1
+Summer11_ggToH130toWWto2Tau2Nu      2
+Summer11_ggToH140toWWto2Tau2Nu      2
+Summer11_ggToH150toWWto2Tau2Nu      2
+Summer11_ggToH160toWWto2Tau2Nu      2
+Summer11_ggToH170toWWto2Tau2Nu      1
+Summer11_ggToH180toWWto2Tau2Nu      1
+Summer11_ggToH190toWWto2Tau2Nu      1
+Summer11_ggToH200toWWto2Tau2Nu      1
+Summer11_ggToH210toWWto2Tau2Nu      1
+Summer11_ggToH220toWWto2Tau2Nu      1
+Summer11_ggToH230toWWto2Tau2Nu      1
+Summer11_ggToH250toWWto2Tau2Nu      1
+Summer11_ggToH300toWWto2Tau2Nu      1
+Summer11_ggToH350toWWto2Tau2Nu      1
+Summer11_ggToH400toWWto2Tau2Nu      1
+Summer11_ggToH450toWWto2Tau2Nu      1
+Summer11_ggToH500toWWto2Tau2Nu      1
+Summer11_ggToH550toWWto2Tau2Nu      1
+Summer11_ggToH600toWWto2Tau2Nu      1
+#
+Summer11_vbfToH120toWWto2L2Nu       1
+Summer11_vbfToH130toWWto2L2Nu       1
+Summer11_vbfToH140toWWto2L2Nu       1
+Summer11_vbfToH150toWWto2L2Nu       1
+Summer11_vbfToH160toWWto2L2Nu       1
+Summer11_vbfToH170toWWto2L2Nu       1
+Summer11_vbfToH180toWWto2L2Nu       1
+Summer11_vbfToH190toWWto2L2Nu       1
+Summer11_vbfToH200toWWto2L2Nu       1
+Summer11_vbfToH210toWWto2L2Nu       1
+Summer11_vbfToH220toWWto2L2Nu       1
+Summer11_vbfToH230toWWto2L2Nu       1
+Summer11_vbfToH250toWWto2L2Nu       1
+Summer11_vbfToH300toWWto2L2Nu       1
+Summer11_vbfToH350toWWto2L2Nu       1
+Summer11_vbfToH400toWWto2L2Nu       1
+Summer11_vbfToH450toWWto2L2Nu       1
+Summer11_vbfToH500toWWto2L2Nu       1
+Summer11_vbfToH550toWWto2L2Nu       1
+Summer11_vbfToH600toWWto2L2Nu       1
+#
+Summer11_vbfToH120toWWtoLNuTauNu    1
+Summer11_vbfToH130toWWtoLNuTauNu    1
+Summer11_vbfToH140toWWtoLNuTauNu    1
+Summer11_vbfToH150toWWtoLNuTauNu    1
+Summer11_vbfToH160toWWtoLNuTauNu    1
+Summer11_vbfToH170toWWtoLNuTauNu    1
+Summer11_vbfToH180toWWtoLNuTauNu    1
+Summer11_vbfToH190toWWtoLNuTauNu    1
+Summer11_vbfToH200toWWtoLNuTauNu    1
+Summer11_vbfToH210toWWtoLNuTauNu    1
+Summer11_vbfToH220toWWtoLNuTauNu    1
+Summer11_vbfToH230toWWtoLNuTauNu    1
+Summer11_vbfToH250toWWtoLNuTauNu    1
+Summer11_vbfToH300toWWtoLNuTauNu    1
+Summer11_vbfToH350toWWtoLNuTauNu    1
+Summer11_vbfToH400toWWtoLNuTauNu    1
+Summer11_vbfToH450toWWtoLNuTauNu    1
+Summer11_vbfToH500toWWtoLNuTauNu    1
+Summer11_vbfToH550toWWtoLNuTauNu    1
+Summer11_vbfToH600toWWtoLNuTauNu    1
+#
+Summer11_vbfToH120toWWto2Tau2Nu     1
+Summer11_vbfToH130toWWto2Tau2Nu     1
+Summer11_vbfToH140toWWto2Tau2Nu     1
+Summer11_vbfToH150toWWto2Tau2Nu     1
+Summer11_vbfToH160toWWto2Tau2Nu     1
+Summer11_vbfToH170toWWto2Tau2Nu     1
+Summer11_vbfToH180toWWto2Tau2Nu     1
+Summer11_vbfToH190toWWto2Tau2Nu     1
+Summer11_vbfToH200toWWto2Tau2Nu     1
+Summer11_vbfToH210toWWto2Tau2Nu     1
+Summer11_vbfToH220toWWto2Tau2Nu     1
+Summer11_vbfToH230toWWto2Tau2Nu     1
+Summer11_vbfToH250toWWto2Tau2Nu     1
+Summer11_vbfToH300toWWto2Tau2Nu     1
+Summer11_vbfToH350toWWto2Tau2Nu     1
+Summer11_vbfToH400toWWto2Tau2Nu     1
+Summer11_vbfToH450toWWto2Tau2Nu     1
+Summer11_vbfToH500toWWto2Tau2Nu     1
+Summer11_vbfToH550toWWto2Tau2Nu     1
+Summer11_vbfToH600toWWto2Tau2Nu     1
+#
+#
+#
+#

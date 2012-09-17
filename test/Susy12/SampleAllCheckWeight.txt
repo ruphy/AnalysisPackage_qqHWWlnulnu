@@ -1,0 +1,244 @@
+####################################################################
+#### name_sample            xsection        name_human_readable ####
+####################################################################
+#
+#
+################################################################
+DATA                           -1              DATA
+################################################################
+#
+#
+#
+000_WWJets2LMad                0.0040224907    WW       WW
+001_GluGluToWWTo4L             0.0013949545    ggWW     WW
+#
+#  
+011_TtWFullDR                  0.0096856293    top
+012_TbartWFullDR               0.0243926630    top
+013_TtFull                     0.0107721903    top
+014_TbartFull                  0.0116785085    top
+015_TsFull                     0.0122894611    top
+016_TbarsFull                  0.0104615429    top
+#
+019_TTTo2L2Nu2B                0.0016569566    top     ttbar
+#
+030_DYtoElEl                   0.0565850053    DY
+031_DYtoMuMu                   0.0561153997    DY
+032_DYtoTauTau                 0.0837185509    DYtautau
+033_DY10toElEl                 0.3389271736    DY    DY-low    
+034_DY10toMuMu                 0.3384486201    DY    DY-low
+035_DY10toTauTau               1.5089513601    DYtautau    DY-low
+#
+#  070_WZFull                     0.0042670528    WZ/ZZ
+071_ZZFull                     0.0018300938    WZ/ZZ
+074_WZJetsMad                  0.0004893420    WZ/ZZ
+#  075_ZZJetsMad                  0.0002819586    WZ/ZZ
+#   
+080_WJetsToLNuMad              0.3863388729    Wjets
+#  081_VGamma                     0.1550354091    Wgamma
+082_WgammaToElNuMad            0.2630577063    Wgamma
+083_WgammaToMuNuMad            0.2643895198    Wgamma
+084_WgammaToTauNuMad           0.2662154235    Wgamma
+#
+#
+#
+#
+#
+9110_ggToH110toWWTo2LAndTau2Nu    0.0003412336 ggH-110
+8110_vbfToH110toWWTo2LAndTau2Nu   0.0000717314 qqH-110
+#
+#
+9122_ggToH122toWWTo2LAndTau2Nu    0.0009566389 ggH-122
+# 8122_vbfToH122toWWTo2LAndTau2Nu   9.9999999999 qqH-122
+#
+#
+9115_ggToH115toWWTo2LAndTau2Nu    0.0005497143 ggH-115
+8115_vbfToH115toWWTo2LAndTau2Nu   0.0001229431 qqH-115   
+#
+#
+9118_ggToH118toWWTo2LAndTau2Nu    0.0007387361 ggH-118
+8118_vbfToH118toWWTo2LAndTau2Nu   0.0001607965 qqH-118
+#
+#   
+1120_ggToH120toWWto2L2Nu       0.0010091551    ggH-120
+2120_ggToH120toWWtoLNuTauNu    0.0010091643    ggH-120
+3120_ggToH120toWWto2Tau2Nu     0.0005036730    ggH-120
+4120_vbfToH120toWWto2L2Nu      0.0000766444    qqH-120
+5120_vbfToH120toWWtoLNuTauNu   0.0000766284    qqH-120
+6120_vbfToH120toWWto2Tau2Nu    0.0000398429    qqH-120
+#
+#
+9124_ggToH124toWWTo2LAndTau2Nu    0.0010890262 ggH-124
+8124_vbfToH124toWWTo2LAndTau2Nu   0.0002573407 qqH-124
+#
+#
+9126_ggToH126toWWTo2LAndTau2Nu    0.0012279534 ggH-126
+8126_vbfToH126toWWTo2LAndTau2Nu   0.0002941770 qqH-126
+#
+#
+9128_ggToH128toWWTo2LAndTau2Nu    0.0013674131 ggH-128
+8128_vbfToH128toWWTo2LAndTau2Nu   0.0003319897 qqH-128
+#
+#
+1130_ggToH130toWWto2L2Nu       0.0018283314    ggH-130
+2130_ggToH130toWWtoLNuTauNu    0.0018442773    ggH-130
+3130_ggToH130toWWto2Tau2Nu     0.0009848455    ggH-130
+4130_vbfToH130toWWto2L2Nu      0.0001486887    qqH-130
+5130_vbfToH130toWWtoLNuTauNu   0.0001487158    qqH-130
+6130_vbfToH130toWWto2Tau2Nu    0.0000777812    qqH-130
+#
+#
+9135_ggToH135toWWTo2LAndTau2Nu    0.0020867660 ggH-135
+8135_vbfToH135toWWTo2LAndTau2Nu   0.0004669185 qqH-135
+#
+#
+1140_ggToH140toWWto2L2Nu       0.0026134876    ggH-140
+2140_ggToH140toWWtoLNuTauNu    0.0025956197    ggH-140
+3140_ggToH140toWWto2Tau2Nu     0.0014836055    ggH-140
+4140_vbfToH140toWWto2L2Nu      0.0002236544    qqH-140
+5140_vbfToH140toWWtoLNuTauNu   0.0002235667    qqH-140
+6140_vbfToH140toWWto2Tau2Nu    0.0001113159    qqH-140
+#
+#
+1150_ggToH150toWWto2L2Nu       0.0031192611    ggH-150
+2150_ggToH150toWWtoLNuTauNu    0.0031193178    ggH-150
+3150_ggToH150toWWto2Tau2Nu     0.0015602269    ggH-150
+4150_vbfToH150toWWto2L2Nu      0.0002923508    qqH-150
+5150_vbfToH150toWWtoLNuTauNu   0.0002827745    qqH-150
+6150_vbfToH150toWWto2Tau2Nu    0.0001422942    qqH-150
+#
+#
+1160_ggToH160toWWto2L2Nu       0.0036198032    ggH-160
+2160_ggToH160toWWtoLNuTauNu    0.0035011319    ggH-160
+3160_ggToH160toWWto2Tau2Nu     0.0017511001    ggH-160
+4160_vbfToH160toWWto2L2Nu      0.0003365376    qqH-160
+5160_vbfToH160toWWtoLNuTauNu   0.0003366235    qqH-160
+6160_vbfToH160toWWto2Tau2Nu    0.0001678863    qqH-160
+#
+#
+1170_ggToH170toWWto2L2Nu       0.0032840815    ggH-170
+2170_ggToH170toWWtoLNuTauNu    0.0031764791    ggH-170
+3170_ggToH170toWWto2Tau2Nu     0.0017227090    ggH-170
+4170_vbfToH170toWWto2L2Nu      0.0003319169    qqH-170
+5170_vbfToH170toWWtoLNuTauNu   0.0003320835    qqH-170
+6170_vbfToH170toWWto2Tau2Nu    0.0001789436    qqH-170
+#
+#
+1180_ggToH180toWWto2L2Nu       0.0026720611    ggH-180
+2180_ggToH180toWWtoLNuTauNu    0.0026719396    ggH-180
+3180_ggToH180toWWto2Tau2Nu     0.0013541897    ggH-180
+4180_vbfToH180toWWto2L2Nu      0.0002945954    qqH-180
+5180_vbfToH180toWWtoLNuTauNu   0.0002928886    qqH-180
+6180_vbfToH180toWWto2Tau2Nu    0.0001572636    qqH-180
+#
+#
+1190_ggToH190toWWto2L2Nu       0.0020133730    ggH-190
+2190_ggToH190toWWtoLNuTauNu    0.0019737799    ggH-190
+3190_ggToH190toWWto2Tau2Nu     0.0009873086    ggH-190
+4190_vbfToH190toWWto2L2Nu      0.0002303133    qqH-190
+5190_vbfToH190toWWtoLNuTauNu   0.0002289645    qqH-190
+6190_vbfToH190toWWto2Tau2Nu    0.0001149111    qqH-190
+#
+#
+1200_ggToH200toWWto2L2Nu       0.0016564690    ggH-200
+2200_ggToH200toWWtoLNuTauNu    0.0016564841    ggH-200
+3200_ggToH200toWWto2Tau2Nu     0.0008688014    ggH-200
+4200_vbfToH200toWWto2L2Nu      0.0001988017    qqH-200
+5200_vbfToH200toWWtoLNuTauNu   0.0002038488    qqH-200
+6200_vbfToH200toWWto2Tau2Nu    0.0000985437    qqH-200
+#
+#
+# 1210_ggToH210toWWto2L2Nu       0.0029074842    ggH-210
+# 2210_ggToH210toWWtoLNuTauNu    0.0029074842    ggH-210
+# 3210_ggToH210toWWto2Tau2Nu     0.0007637523    ggH-210
+# 4210_vbfToH210toWWto2L2Nu      0.0003611755    qqH-210
+# 5210_vbfToH210toWWtoLNuTauNu   0.0003611162    qqH-210
+# 6210_vbfToH210toWWto2Tau2Nu    0.0000893916    qqH-210
+#
+#
+# 1220_ggToH220toWWto2L2Nu       0.0025985125    ggH-220
+# 2220_ggToH220toWWtoLNuTauNu    0.0025983708    ggH-220
+# 3220_ggToH220toWWto2Tau2Nu     0.0006491617    ggH-220
+# 4220_vbfToH220toWWto2L2Nu      0.0003383178    qqH-220
+# 5220_vbfToH220toWWtoLNuTauNu   0.0003302618    qqH-220
+# 6220_vbfToH220toWWto2Tau2Nu    0.0000899820    qqH-220
+#
+#
+# 1230_ggToH230toWWto2L2Nu       0.0023547595    ggH-230
+# 2230_ggToH230toWWtoLNuTauNu    0.0023548023    ggH-230
+# 3230_ggToH230toWWto2Tau2Nu     0.0006186748    ggH-230
+# 4230_vbfToH230toWWto2L2Nu      0.0003027484    qqH-230
+# 5230_vbfToH230toWWtoLNuTauNu   0.0003028092    qqH-230
+# 6230_vbfToH230toWWto2Tau2Nu    0.0000747643    qqH-230
+#
+#
+1250_ggToH250toWWto2L2Nu       0.0010241611    ggH-250
+2250_ggToH250toWWtoLNuTauNu    0.0010137122    ggH-250
+3250_ggToH250toWWto2Tau2Nu     0.0005174620    ggH-250
+4250_vbfToH250toWWto2L2Nu      0.0001267716    qqH-250
+5250_vbfToH250toWWtoLNuTauNu   0.0001267762    qqH-250
+6250_vbfToH250toWWto2Tau2Nu    0.0000638278    qqH-250
+#
+#
+1300_ggToH300toWWto2L2Nu       0.0007100710    ggH-300
+2300_ggToH300toWWtoLNuTauNu    0.0007100516    ggH-300
+3300_ggToH300toWWto2Tau2Nu     0.0003723506    ggH-300
+4300_vbfToH300toWWto2L2Nu      0.0000875417    qqH-300
+5300_vbfToH300toWWtoLNuTauNu   0.0000875976    qqH-300
+6300_vbfToH300toWWto2Tau2Nu    0.0000473345    qqH-300
+#
+#
+1350_ggToH350toWWto2L2Nu       0.0006536898    ggH-350
+2350_ggToH350toWWtoLNuTauNu    0.0006537136    ggH-350
+3350_ggToH350toWWto2Tau2Nu     0.0003273203    ggH-350
+5350_vbfToH350toWWtoLNuTauNu   0.0000611442    qqH-350
+6350_vbfToH350toWWto2Tau2Nu    0.0000310497    qqH-350
+4350_vbfToH350toWWto2L2Nu      0.0000611878    qqH-350
+#
+#
+1400_ggToH400toWWto2L2Nu       0.0005009410    ggH-400
+2400_ggToH400toWWtoLNuTauNu    0.0005009319    ggH-400
+3400_ggToH400toWWto2Tau2Nu     0.0002635247    ggH-400
+4400_vbfToH400toWWto2L2Nu      0.0000402098    qqH-400
+5400_vbfToH400toWWtoLNuTauNu   0.0000404553    qqH-400
+6400_vbfToH400toWWto2Tau2Nu    0.0000200946    qqH-400
+#
+#
+1450_ggToH450toWWto2L2Nu       0.0003200669    ggH-450
+2450_ggToH450toWWtoLNuTauNu    0.0003200553    ggH-450
+3450_ggToH450toWWto2Tau2Nu     0.0001715166    ggH-450
+4450_vbfToH450toWWto2L2Nu      0.0000292606    qqH-450
+5450_vbfToH450toWWtoLNuTauNu   0.0000292534    qqH-450
+6450_vbfToH450toWWto2Tau2Nu    0.0000146373    qqH-450
+#
+#
+1500_ggToH500toWWto2L2Nu       0.0002000491    ggH-500
+2500_ggToH500toWWtoLNuTauNu    0.0002000418    ggH-500
+3500_ggToH500toWWto2Tau2Nu     0.0001071895    ggH-500
+4500_vbfToH500toWWto2L2Nu      0.0000220909    qqH-500
+5500_vbfToH500toWWtoLNuTauNu   0.0000228085    qqH-500
+6500_vbfToH500toWWto2Tau2Nu    0.0000111392    qqH-500
+#
+#
+1550_ggToH550toWWto2L2Nu       0.0001254853    ggH-550
+2550_ggToH550toWWtoLNuTauNu    0.0001254762    ggH-550
+3550_ggToH550toWWto2Tau2Nu     0.0000636584    ggH-550
+4550_vbfToH550toWWto2L2Nu      0.0000175112    qqH-550
+5550_vbfToH550toWWtoLNuTauNu   0.0000187858    qqH-550
+6550_vbfToH550toWWto2Tau2Nu    0.0000091532    qqH-550
+#
+#
+1600_ggToH600toWWto2L2Nu       0.0000791110    ggH-600
+2600_ggToH600toWWtoLNuTauNu    0.0000791074    ggH-600
+3600_ggToH600toWWto2Tau2Nu     0.0000428766    ggH-600
+4600_vbfToH600toWWto2L2Nu      0.0000139997    qqH-600
+5600_vbfToH600toWWtoLNuTauNu   0.0000138430    qqH-600
+6600_vbfToH600toWWto2Tau2Nu    0.0000073369    qqH-600
+#
+#
+#
+#
+#
+#
+#
+#

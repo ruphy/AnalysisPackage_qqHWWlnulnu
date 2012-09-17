@@ -1,0 +1,34 @@
+###################################
+#### Cut for Analysis workflow ####
+###################################
+#
+#
+#     (((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>20 && (l1_flavour!=l2_flavour)) || ((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>35 && (l1_flavour==l2_flavour)))
+# H160 cut #
+(abs(q1_Eta) < 2.5 && abs(q2_Eta) < 2.5)                                                   &&      ((q2_bTag_trackCountingHighPurBJetTags>2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0) || (q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags>2.0))   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(abs(q1_Eta) < 2.5 && abs(q2_Eta) < 2.5)                                                   &&      ((q2_bTag_trackCountingHighPurBJetTags>2.0 && q1_bTag_trackCountingHighPurBJetTags>2.0))                                                                                             &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(abs(q1_Eta) < 2.5 && abs(q2_Eta) < 2.5)                                                   &&      ((q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0))                                                                                             &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+((abs(q1_Eta) < 2.5 && abs(q2_Eta) >= 2.5) || (abs(q1_Eta) >= 2.5 && abs(q2_Eta) < 2.5))                                                    &&      ((q2_bTag_trackCountingHighPurBJetTags>2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0) || (q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags>2.0))   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+((abs(q1_Eta) < 2.5 && abs(q2_Eta) >= 2.5) || (abs(q1_Eta) >= 2.5 && abs(q2_Eta) < 2.5))                                                    &&      ((q2_bTag_trackCountingHighPurBJetTags>2.0 && q1_bTag_trackCountingHighPurBJetTags>2.0))                                                                                             &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+((abs(q1_Eta) < 2.5 && abs(q2_Eta) >= 2.5) || (abs(q1_Eta) >= 2.5 && abs(q2_Eta) < 2.5))                                                    &&      ((q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0))                                                                                             &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    ((abs(q1_Eta) < 2.5 && abs(q2_Eta) >= 2.5) || (abs(q1_Eta) >= 2.5 && abs(q2_Eta) < 2.5))   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    (abs(q1_Eta) < 2.5 && abs(q2_Eta) < 2.5)                                                   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    (abs(q1_Eta) >= 2.5 && abs(q2_Eta) >= 2.5)                                                 &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+# ee
+#    l1_flavour == 11 && l2_flavour == 11   && ((abs(q1_Eta) < 2.5 && abs(q2_Eta) >= 2.5) || (abs(q1_Eta) >= 2.5 && abs(q2_Eta) < 2.5))   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    l1_flavour == 11 && l2_flavour == 11   && (abs(q1_Eta) < 2.5 && abs(q2_Eta) < 2.5)                                                   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    l1_flavour == 11 && l2_flavour == 11   && (abs(q1_Eta) >= 2.5 && abs(q2_Eta) >= 2.5)                                                 &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+# mumu
+#    l1_flavour == 13 && l2_flavour == 13   && ((abs(q1_Eta) < 2.5 && abs(q2_Eta) >= 2.5) || (abs(q1_Eta) >= 2.5 && abs(q2_Eta) < 2.5))   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    l1_flavour == 13 && l2_flavour == 13   && (abs(q1_Eta) < 2.5 && abs(q2_Eta) < 2.5)                                                   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    l1_flavour == 13 && l2_flavour == 13   && (abs(q1_Eta) >= 2.5 && abs(q2_Eta) >= 2.5)                                                 &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+# emu
+#    l1_flavour != l2_flavour               && ((abs(q1_Eta) < 2.5 && abs(q2_Eta) >= 2.5) || (abs(q1_Eta) >= 2.5 && abs(q2_Eta) < 2.5))   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    l1_flavour != l2_flavour               && (abs(q1_Eta) < 2.5 && abs(q2_Eta) < 2.5)                                                   &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#    l1_flavour != l2_flavour               && (abs(q1_Eta) >= 2.5 && abs(q2_Eta) >= 2.5)                                                 &&    (M_ll>75 && M_ll<105)           && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+#
+#
+#

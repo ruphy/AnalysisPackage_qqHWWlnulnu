@@ -1,0 +1,4 @@
+((l1_flavour==l2_flavour) && (M_ll<70 && M_ll>10))               && met>20
+((l1_flavour==l2_flavour) && ((M_ll>70 && M_ll<110) || M_ll<10)) && met>20
+((l1_flavour==l2_flavour) && (M_ll<70 && M_ll>10))               && met<20
+((l1_flavour==l2_flavour) && ((M_ll>70 && M_ll<110) || M_ll<10)) && met<20

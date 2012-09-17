@@ -1,0 +1,18 @@
+# list of samples
+#
+#
+H-120x10  1
+H-160x1   1
+H-200x2   1
+#
+#
+W+jets  0
+ggWW    0
+VV      0
+top   0
+DY    0
+#
+#
+DATA -1
+#
+#

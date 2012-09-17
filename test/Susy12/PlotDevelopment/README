@@ -1,0 +1,30 @@
+///---- Latinos development ----
+
+
+1) 07 September 2012      5.1/fb      full ICHEP lumi    ---- first SUSY plots ----
+
+mkdir output_Latinos_tree_2012_SUSY_2jet
+
+
+ls output_Latinos_tree_2012_SUSY/ |  awk '{print "./bin/FilterCut.exe output_Latinos_tree_2012_SUSY/"$1" output_Latinos_tree_2012_SUSY_2jet/"$1" Susy2jet2012"}' 
+ls output_Latinos_tree_2012_SUSY/ |  awk '{print "./bin/FilterCut.exe output_Latinos_tree_2012_SUSY/"$1" output_Latinos_tree_2012_SUSY_2jet/"$1" Susy2jet2012"}'   &> skimSUSY2jet2012.sh
+chmod +x skimSUSY2jet2012.sh
+./skimSUSY2jet2012.sh
+
+./bin/MCDATAComparisonPLOTTool_ManySamples.exe     test/Susy12/PlotDevelopment/testMCDATAComparisonPLOTTool_ForDevelopment_07Sep.cfg
+./bin/MCDATAComparisonPLOTTool.exe                 test/Susy12/PlotDevelopment/testMCDATAComparisonPLOTTool_ForDevelopment_07Sep.cfg
+r00t AMPlotMacroCreator_Susy.cxx
+
+
+
+r00t output_Latinos_tree_2012_SUSY_2jet/latino_991_T2bw.root
+r00t output_Latinos_tree_2012_SUSY_2jet/latino_990_T2tt.root
+
+
+TTree* tree = (TTree*) _file0 -> Get ("latino")
+tree->Draw("susyMstop:susyMLSP","","colz");
+
+
+
+
+

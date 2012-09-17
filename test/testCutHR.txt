@@ -1,0 +1,86 @@
+#  2l+2j 
+#  VBF
+#  CJV 30 GeV
+#  LEP
+#  Z_{Veto}
+#  MET
+#  b-tag
+#  MVAJet
+#  MVALep
+#  
+#  
+#
+2l+2j 
+DY-veto
+VBF
+lep
+b-vet
+#
+2l+2j 
+2l+2j ee
+2l+2j #mu#mu
+2l+2j e#mu
+#
+2l+2j 
+DY-veto
+VBF
+lep
+b-vet
+#
+# ee
+2l+2j ee
+DY-veto ee
+VBF ee
+lep ee
+b-vet ee
+#
+# mumu 
+2l+2j #mu#mu
+DY-veto #mu#mu
+VBF #mu#mu
+lep #mu#mu
+b-vet #mu#mu
+#
+# emu
+2l+2j  e#mu
+DY-veto e#mu
+VBF e#mu
+lep e#mu
+b-vet e#mu
+#
+#
+#
+#
+2l+2j 
+DY-veto
+VBF
+lep
+b-vet
+#
+MIT
+#
+CJV-20
+CJV-30
+CJV-40
+600-2l+2j
+600-VBF
+600-LEP
+600-bVeto
+2l+2j-emu 
+VBF-emu
+LEP-emu
+bVeto-emu
+2l+2j-ee
+VBF-ee
+LEP-ee
+bVeto-ee
+2l+2j-mumu
+VBF-mumu
+LEP-mumu
+bVeto-mumu
+for-ttbar
+try
+try
+try
+try
+try

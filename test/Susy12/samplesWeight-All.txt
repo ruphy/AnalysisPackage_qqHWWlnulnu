@@ -1,0 +1,324 @@
+# name_sample            PUindex
+#
+Summer11_DY50toLLMadD6T             1
+#
+Summer11_WWJets2LMad                1
+Summer11_GluGluToWWTo4L             1
+#
+Summer11_TTJetsMad                  1
+Summer11_TtWFullDR                  1
+Summer11_TbartWFullDR               1
+Summer11_TtFull                     1
+Summer11_TbartFull                  1
+Summer11_TsFull                     1
+Summer11_TbarsFull                  1
+# 
+Summer11_DYtoElEl                   1
+Summer11_DYtoMuMu                   1
+Summer11_DYtoTauTau                 1
+Summer11_DY10toElEl                 2
+Summer11_DY10toMuMu                 2
+Summer11_DY10toTauTau               2
+# 
+Summer11_WZFull                     1
+Summer11_ZZFull                     1
+Summer11_GluGluZZ2L2L               1
+Summer11_GluGluZZ4L                 1
+#
+Summer11_WJetsToLNuMad              1
+Summer11_VGamma                     1
+#
+#
+# 
+Summer11_ggToH120toWWto2L2Nu        2
+Summer11_ggToH130toWWto2L2Nu        2
+Summer11_ggToH140toWWto2L2Nu        2
+Summer11_ggToH150toWWto2L2Nu        2
+Summer11_ggToH160toWWto2L2Nu        2
+Summer11_ggToH170toWWto2L2Nu        2
+Summer11_ggToH180toWWto2L2Nu        2
+Summer11_ggToH190toWWto2L2Nu        2
+Summer11_ggToH200toWWto2L2Nu        1
+Summer11_ggToH210toWWto2L2Nu        2
+Summer11_ggToH220toWWto2L2Nu        2
+Summer11_ggToH230toWWto2L2Nu        2
+Summer11_ggToH250toWWto2L2Nu        2
+Summer11_ggToH300toWWto2L2Nu        2
+Summer11_ggToH350toWWto2L2Nu        2
+Summer11_ggToH400toWWto2L2Nu        2
+Summer11_ggToH450toWWto2L2Nu        2
+Summer11_ggToH500toWWto2L2Nu        2
+Summer11_ggToH550toWWto2L2Nu        2
+Summer11_ggToH600toWWto2L2Nu        2
+#
+Summer11_ggToH120toWWtoLNuTauNu     1
+Summer11_ggToH130toWWtoLNuTauNu     1
+Summer11_ggToH140toWWtoLNuTauNu     1
+Summer11_ggToH150toWWtoLNuTauNu     1
+Summer11_ggToH160toWWtoLNuTauNu     1
+Summer11_ggToH170toWWtoLNuTauNu     1
+Summer11_ggToH180toWWtoLNuTauNu     1
+Summer11_ggToH190toWWtoLNuTauNu     1
+Summer11_ggToH200toWWtoLNuTauNu     1
+Summer11_ggToH210toWWtoLNuTauNu     1
+Summer11_ggToH220toWWtoLNuTauNu     1
+Summer11_ggToH230toWWtoLNuTauNu     1
+Summer11_ggToH250toWWtoLNuTauNu     1
+Summer11_ggToH300toWWtoLNuTauNu     1
+Summer11_ggToH350toWWtoLNuTauNu     1
+Summer11_ggToH400toWWtoLNuTauNu     1
+Summer11_ggToH450toWWtoLNuTauNu     1
+Summer11_ggToH500toWWtoLNuTauNu     1
+Summer11_ggToH550toWWtoLNuTauNu     1
+Summer11_ggToH600toWWtoLNuTauNu     1
+#
+Summer11_ggToH120toWWto2Tau2Nu      1
+Summer11_ggToH130toWWto2Tau2Nu      2
+Summer11_ggToH140toWWto2Tau2Nu      2
+Summer11_ggToH150toWWto2Tau2Nu      2
+Summer11_ggToH160toWWto2Tau2Nu      2
+Summer11_ggToH170toWWto2Tau2Nu      1
+Summer11_ggToH180toWWto2Tau2Nu      1
+Summer11_ggToH190toWWto2Tau2Nu      1
+Summer11_ggToH200toWWto2Tau2Nu      1
+Summer11_ggToH210toWWto2Tau2Nu      1
+Summer11_ggToH220toWWto2Tau2Nu      1
+Summer11_ggToH230toWWto2Tau2Nu      1
+Summer11_ggToH250toWWto2Tau2Nu      1
+Summer11_ggToH300toWWto2Tau2Nu      1
+Summer11_ggToH350toWWto2Tau2Nu      1
+Summer11_ggToH400toWWto2Tau2Nu      1
+Summer11_ggToH450toWWto2Tau2Nu      1
+Summer11_ggToH500toWWto2Tau2Nu      1
+Summer11_ggToH550toWWto2Tau2Nu      1
+Summer11_ggToH600toWWto2Tau2Nu      1
+#
+Summer11_vbfToH120toWWto2L2Nu       1
+Summer11_vbfToH130toWWto2L2Nu       1
+Summer11_vbfToH140toWWto2L2Nu       1
+Summer11_vbfToH150toWWto2L2Nu       1
+Summer11_vbfToH160toWWto2L2Nu       1
+Summer11_vbfToH170toWWto2L2Nu       1
+Summer11_vbfToH180toWWto2L2Nu       1
+Summer11_vbfToH190toWWto2L2Nu       1
+Summer11_vbfToH200toWWto2L2Nu       1
+Summer11_vbfToH210toWWto2L2Nu       1
+Summer11_vbfToH220toWWto2L2Nu       1
+Summer11_vbfToH230toWWto2L2Nu       1
+Summer11_vbfToH250toWWto2L2Nu       1
+Summer11_vbfToH300toWWto2L2Nu       1
+Summer11_vbfToH350toWWto2L2Nu       1
+Summer11_vbfToH400toWWto2L2Nu       1
+Summer11_vbfToH450toWWto2L2Nu       1
+Summer11_vbfToH500toWWto2L2Nu       1
+Summer11_vbfToH550toWWto2L2Nu       1
+Summer11_vbfToH600toWWto2L2Nu       1
+#
+Summer11_vbfToH120toWWtoLNuTauNu    1
+Summer11_vbfToH130toWWtoLNuTauNu    1
+Summer11_vbfToH140toWWtoLNuTauNu    1
+Summer11_vbfToH150toWWtoLNuTauNu    1
+Summer11_vbfToH160toWWtoLNuTauNu    1
+Summer11_vbfToH170toWWtoLNuTauNu    1
+Summer11_vbfToH180toWWtoLNuTauNu    1
+Summer11_vbfToH190toWWtoLNuTauNu    1
+Summer11_vbfToH200toWWtoLNuTauNu    1
+Summer11_vbfToH210toWWtoLNuTauNu    1
+Summer11_vbfToH220toWWtoLNuTauNu    1
+Summer11_vbfToH230toWWtoLNuTauNu    1
+Summer11_vbfToH250toWWtoLNuTauNu    1
+Summer11_vbfToH300toWWtoLNuTauNu    1
+Summer11_vbfToH350toWWtoLNuTauNu    1
+Summer11_vbfToH400toWWtoLNuTauNu    1
+Summer11_vbfToH450toWWtoLNuTauNu    1
+Summer11_vbfToH500toWWtoLNuTauNu    1
+Summer11_vbfToH550toWWtoLNuTauNu    1
+Summer11_vbfToH600toWWtoLNuTauNu    1
+#
+Summer11_vbfToH120toWWto2Tau2Nu     1
+Summer11_vbfToH130toWWto2Tau2Nu     1
+Summer11_vbfToH140toWWto2Tau2Nu     1
+Summer11_vbfToH150toWWto2Tau2Nu     1
+Summer11_vbfToH160toWWto2Tau2Nu     1
+Summer11_vbfToH170toWWto2Tau2Nu     1
+Summer11_vbfToH180toWWto2Tau2Nu     1
+Summer11_vbfToH190toWWto2Tau2Nu     1
+Summer11_vbfToH200toWWto2Tau2Nu     1
+Summer11_vbfToH210toWWto2Tau2Nu     1
+Summer11_vbfToH220toWWto2Tau2Nu     1
+Summer11_vbfToH230toWWto2Tau2Nu     1
+Summer11_vbfToH250toWWto2Tau2Nu     1
+Summer11_vbfToH300toWWto2Tau2Nu     1
+Summer11_vbfToH350toWWto2Tau2Nu     1
+Summer11_vbfToH400toWWto2Tau2Nu     1
+Summer11_vbfToH450toWWto2Tau2Nu     1
+Summer11_vbfToH500toWWto2Tau2Nu     1
+Summer11_vbfToH550toWWto2Tau2Nu     1
+Summer11_vbfToH600toWWto2Tau2Nu     1
+#
+#
+#
+#
+##
+Spring11_DYToEE_M-10To20_TuneZ2_7TeV-pythia6                         0
+Spring11_DYToEE_M-20_CT10_TuneZ2_7TeV-powheg-pythia                  0
+Spring11_DYToMuMu_M-10To20_TuneZ2_7TeV-pythia6                       0
+Spring11_DYToMuMu_M-20_CT10_TuneZ2_7TeV-powheg-pythia                0 
+Spring11_DYToTauTau_M-10To20_CT10_TuneZ2_7TeV-powheg-pythia-tauola   0 
+Spring11_DYToTauTau_M-20_CT10_TuneZ2_7TeV-powheg-pythia-tauola       0 
+#
+Spring11_DYJetsToLL_TuneD6T_M-10To50_7TeV-madgraph-tauola            0 
+Spring11_DYJetsToLL_TuneD6T_M-50_7TeV-madgraph-tauola                0 
+#
+#
+#
+Spring11_TTJets_TuneZ2_7TeV-madgraph-tauola            0
+#
+#
+#
+Spring11_TToBLNu_TuneZ2_s-channel_7TeV-madgraph         0
+Spring11_TToBLNu_TuneZ2_t-channel_7TeV-madgraph         0
+Spring11_TToBLNu_TuneZ2_tW-channel_7TeV-madgraph        0
+#
+#
+#
+Spring11_WZtoAnything_TuneZ2_7TeV-pythia6-tauola         0 
+Spring11_ZZtoAnything_TuneZ2_7TeV-pythia6-tauola         0 
+Spring11_VVJetsTo4L_TuneD6T_7TeV-madgraph-tauola         0 
+Spring11_WWTo2L2Nu_TuneZ2_7TeV-pythia6                   0
+Spring11_GluGluToWWTo4L_TuneZ2_7TeV-gg2ww-pythia6        0 
+#     WWTo2L2Nu_7TeV-mcatnlo     0
+#     WWTo2L2Nu_scaleup_7TeV-mcatnlo     0
+#     WWTo2L2Nu_scaledown_7TeV-mcatnlo    0
+Spring11_PhotonVJets_7TeV-madgraph    0
+Spring11_WJetsToLNu_TuneZ2_7TeV-madgraph-tauola    0
+#     WToLNu_TuneZ2_7TeV_pythia6     0
+Spring11_WToENu_TuneZ2_7TeV-pythia6     0
+Spring11_WToMuNu_TuneZ2_7TeV-pythia6     0
+Spring11_WToTauNu_TuneZ2_7TeV-pythia6-tauola    0
+Spring11_WPlusToENu_CT10_TuneZ2_7TeV-powheg-pythia    0
+Spring11_WMinusToENu_CT10_TuneZ2_7TeV-powheg-pythia   0
+Spring11_WPlusToTauNu_CT10_TuneZ2_7TeV-powheg-pythia-tauola     0
+Spring11_WMinusToTauNu_CT10_TuneZ2_7TeV-powheg-pythia-tauola     0
+Spring11_WPlusToMuNu_CT10_TuneZ2_7TeV-powheg-pythia     0
+Spring11_WMinusToMuNu_CT10_TuneZ2_7TeV-powheg-pythia     0
+#   
+#   
+Spring11_GluGluToHToWWTo2L2Nu_M-120_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-130_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-140_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-150_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-160_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-170_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-180_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-190_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-200_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-210_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-220_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-230_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-250_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-300_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-350_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-400_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-450_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-500_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-550_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWTo2L2Nu_M-600_7TeV-powheg-pythia6   0
+#      
+Spring11_GluGluToHToWWToLNuTauNu_M-120_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWToLNuTauNu_M-130_7TeV-powheg-pythia6   0
+Spring11_GluGluToHToWWToLNuTauNu_M-140_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-150_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-160_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-170_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-180_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-190_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-200_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-210_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-220_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-230_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-250_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-300_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-350_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-400_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-450_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-500_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-550_7TeV-powheg-pythia6   0 
+Spring11_GluGluToHToWWToLNuTauNu_M-600_7TeV-powheg-pythia6   0 
+#       
+Spring11_GluGluToHToWWTo2Tau2Nu_M-120_7TeV-powheg-pythia6    0 
+Spring11_GluGluToHToWWTo2Tau2Nu_M-130_7TeV-powheg-pythia6    0 
+Spring11_GluGluToHToWWTo2Tau2Nu_M-140_7TeV-powheg-pythia6    0 
+Spring11_GluGluToHToWWTo2Tau2Nu_M-150_7TeV-powheg-pythia6    0 
+Spring11_GluGluToHToWWTo2Tau2Nu_M-160_7TeV-powheg-pythia6    0 
+Spring11_GluGluToHToWWTo2Tau2Nu_M-170_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-180_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-190_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-200_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-210_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-220_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-230_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-250_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-300_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-350_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-400_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-450_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-500_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-550_7TeV-powheg-pythia6    0
+Spring11_GluGluToHToWWTo2Tau2Nu_M-600_7TeV-powheg-pythia6    0
+#       
+Spring11_VBF_HToWWTo2L2Nu_M-120_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-130_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-140_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-150_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-160_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-170_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-180_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-190_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-200_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-250_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-300_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-350_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-400_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-450_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-500_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-550_7TeV-powheg-pythia6    0 
+Spring11_VBF_HToWWTo2L2Nu_M-600_7TeV-powheg-pythia6    0 
+#       
+Spring11_VBF_HToWWToLNuTauNu_M-120_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-130_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-140_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-150_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-160_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-170_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-180_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-190_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-200_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-250_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-300_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-350_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-400_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-450_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-500_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-550_7TeV-powheg-pythia6   0 
+Spring11_VBF_HToWWToLNuTauNu_M-600_7TeV-powheg-pythia6   0 
+#       
+Spring11_VBF_HToWWTo2Tau2Nu_M-120_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-130_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-140_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-150_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-160_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-170_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-180_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-190_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-200_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-250_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-300_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-350_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-400_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-450_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-500_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-550_7TeV-powheg-pythia6   0  
+Spring11_VBF_HToWWTo2Tau2Nu_M-600_7TeV-powheg-pythia6   0  
+#       
+#

@@ -1,0 +1,42 @@
+###################################
+#### Cut for Analysis workflow ####
+###################################
+#
+#
+#     (((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>20 && (l1_flavour!=l2_flavour)) || ((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>40 && (l1_flavour==l2_flavour)))
+# H160 cut #
+M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+(l1_flavour==11 && l2_flavour==11) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(l1_flavour==11 && l2_flavour==13) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(l1_flavour==13 && l2_flavour==11) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(l1_flavour==13 && l2_flavour==13) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(l1_flavour==11) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(l1_flavour==13) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(l2_flavour==11) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(l2_flavour==13) && M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+# zone A
+#
+(!(M_ll<106.1876 && M_ll>76.1876))    &&   (l1_flavour==11) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(!(M_ll<106.1876 && M_ll>76.1876))    &&   (l1_flavour==13) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(!(M_ll<106.1876 && M_ll>76.1876))    &&   (l2_flavour==11) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(!(M_ll<106.1876 && M_ll>76.1876))    &&   (l2_flavour==13) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+# zone B
+#
+(M_ll<106.1876 && M_ll>76.1876)    &&     (l1_flavour==11) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(M_ll<106.1876 && M_ll>76.1876)    &&     (l1_flavour==13) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(M_ll<106.1876 && M_ll>76.1876)    &&     (l2_flavour==11) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+(M_ll<106.1876 && M_ll>76.1876)    &&     (l2_flavour==13) && M_ll>12 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+#
+#   abs(q1_Eta)<1.0 && abs(q2_Eta)<1.0  &&                                                       M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   abs(q1_Eta)<2.0 && abs(q1_Eta)>1.0 && abs(q2_Eta)<2.0  &&  abs(q2_Eta)>1.0  &&               M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   abs(q1_Eta)<3.0 && abs(q1_Eta)>2.0 && abs(q2_Eta)<3.0  &&  abs(q2_Eta)>2.0  &&               M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+#   abs(q1_Eta)>2.0 && abs(q2_Eta)>2.0  &&                                                       M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   abs(q1_Eta)>3.0 && abs(q2_Eta)>3.0  &&                                                       M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+#
+#

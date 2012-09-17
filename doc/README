@@ -1,0 +1,951 @@
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+///~~~~ framework for qqH > WW > lnln analysis ~~~~
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Code:
+    http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/UserCode/AMassironi/AnalysisPackage_qqHWWlnulnu/
+
+
+    export CVS_RSH=ssh
+    export CVSROOT=:ext:amassiro@cmscvs.cern.ch:/cvs_server/repositories/CMSSW
+    cvs co -d NtuplePackage UserCode/Bicocca/PhysicsTools/NtuplePackage
+    cvs co -d AnalysisPackage_qqHWWlnulnu UserCode/AMassironi/AnalysisPackage_qqHWWlnulnu
+
+
+
+Step:
+1) MiBiCommonNT producer
+2) vbfPreselections
+3) ntuple producer
+4*) Plot tool
+5) Train MV discriminants or Selections
+
+
+10) Exclusion/Discovery plot
+
+
+cat samples_aug.txt | tr "," " " | awk '{print "["$2"] \nCMSSW.datasetpath = "$12}'
+
+
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1) MiBiCommonNT producer 
+    see https://twiki.cern.ch/twiki/bin/view/Main/MiBiCommonPAT
+    Description: require at least 1 lepton and 2 jets
+    
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2) vbf preselections
+    File:  vbfPreselection.cpp
+    Description: require minimum number of leptons and jets (with Deta and Mjj requirements)
+     At this stage select "JetAlgorithm" 
+	  Script to submit to MiB cluster
+	  and save on cluster
+	  
+			cd scripts/submit/
+			perl launchJobs_hercules.pl params_hercules.CFG
+			
+			[~~~~
+			  to create list
+			  ls /gwteray/users/amassiro/MiBiCommonNT/Spring11/ &> ../../data/LISTOFSamples_Spring11.txt 
+			 ~~~~]
+			
+		then add results together
+		        [~~~~ clean
+		        ls -d */  | awk '{print "rm "$1"/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root"}' | /bin/sh
+		        ~~~~]
+			ls -d */  | awk '{print "hadd "$1"/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root "$1"/*PFlow.root"}' | /bin/sh
+			ls -d */  | awk '{print "hadd "$1"/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root "$1"/*AK5PF.root"}' | /bin/sh
+			
+		And add DATA samples:
+			mkdir DATA
+			hadd DATA/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root  EG_Run2010A-Nov4ReReco_v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root  Electron_Run2010B-Nov4ReReco_v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root Mu_Run2010A-Nov4ReReco_v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root Mu_Run2010B-Nov4ReReco_v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root
+			hadd DATA/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root  EG_Run2010A-Dec22ReReco_v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root  Electron_Run2010B-Dec22ReReco_v1_2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root Mu_Run2010A-Dec22ReReco_v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root Mu_Run2010B-Dec22ReReco_v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsPFlow_TOT.root
+
+                        hadd DATA/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleElectron_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleMu_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root ElectronHad_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuHad_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root SingleElectron_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root SingleMu_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuEG_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root 
+                        hadd DATA/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleMu_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root ElectronHad_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuHad_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root SingleElectron_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root SingleMu_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuEG_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root 
+                        
+
+                        hadd DATA/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleElectron_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleMu_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuEG_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root 
+                        rm DATA/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleElectron_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleMu_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuEG_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root 
+                        
+
+hadd DATA/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleElectron_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleMu_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuEG_Run2011A-PromptReco-v2/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleElectron_Run2011A-PromptReco-v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root DoubleMu_Run2011A-PromptReco-v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root MuEG_Run2011A-PromptReco-v1/Jets2Lepton2_MiBiCommonNTOneLeptonTwoJetsAK5PF_TOT.root  
+
+
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3) ntuple producer
+    File: NtupleProducer.cpp
+    Description: selection of the objects in the analysis (2 leptons and 2 jets) and  produce ntuples with information
+   
+   To test: ./bin/NtupleProducer.exe test/testNtupleProducer.cfg
+   
+   To run on cluster:
+   
+   
+   copy from "gwtera" to save place (and change name to be easy reading) : (cool! if two samples with same name (same number, resubmit failure from crab for example) then only the "last" is copied! Auto-preventing from double-counting!!!)
+	
+	      ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul042011 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Spring11_18July_MCandDATA_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul042011/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul042011/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Spring11_18July_MCandDATA_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+	
+              ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul142011 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Spring11_18July_MCandDATA_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul142011/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul142011/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Spring11_18July_MCandDATA_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+              
+              ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul132011 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Summer11_22July_MCandDATA_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul132011/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul132011/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Summer11_22July_MCandDATA_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+
+              
+
+
+
+	      ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul212011Spring11 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul212011Spring11/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul212011Spring11/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+	      ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul242011Spring11 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul242011Spring11/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul242011Spring11/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+	      ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul252011Spring11 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul252011Spring11/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul252011Spring11/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+	      ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul262011Spring11 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul262011Spring11/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Spring11/Jul262011Spring11/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Spring11_25July_MC_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+	      ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Jul252011 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Summer11_25July_MC_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Jul252011/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Jul252011/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Summer11_25July_MC_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+	      ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Jul262011 | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Summer11_25July_MC_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Jul262011/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Jul262011/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Summer11_25July_MC_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+	      
+              ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Aug112011/ | awk '{print "mkdir /gwteraz/users/amassiro/VBF/Summer11_Aug112011_MC_PATLatinos/"$1" ; ls /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Aug112011/"$1" | tr @_@ @ @ | awk #{print @cp /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/MC/Summer11/Aug112011/" $1 "/@$1@_@$2@_@$3@_@$4@ /gwteraz/users/amassiro/VBF/Summer11_Aug112011_MC_PATLatinos/" $1 "/@$1@_@$2@.root@}# | /bin/sh "}'  | tr "@" "\"" | tr "#" "'"   | /bin/sh
+
+
+
+     rm test/Latinos/dir_cfg_skimmed_MC/NtupleProducer*
+     root -l test/Latinos/cfgCreator_MC_HERCULES_PATtoNT.cxx
+     .q
+     root -l test/Latinos/cfgLauncher_MC_HERCULES_PATtoNT.cxx
+     .q
+    
+    rm test/Latinos/dir_cfg_skimmed_MC_Summer11/NtupleProducer*
+    root -l test/Latinos/cfgCreator_MC_HERCULES_PATtoNT_Summer11.cxx
+    .q
+    root -l test/Latinos/cfgLauncher_MC_HERCULES_PATtoNT_Summer11.cxx
+    .q
+    
+    
+    
+     and then add them together:
+     ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_21Jul2011/  | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_21Jul2011/out_NtupleProducer_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_21Jul2011/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+     ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_22Jul2011_Summer11/  | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_22Jul2011_Summer11/out_NtupleProducer_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_22Jul2011_Summer11/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+     ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_22Jul2011_Spring11/  | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_22Jul2011_Spring11/out_NtupleProducer_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_22Jul2011_Spring11/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+     
+    
+    ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Summer11/  | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Summer11/out_NtupleProducer_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Summer11/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+    
+    ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/  | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/out_NtupleProducer_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+    ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/   | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/out_NtupleProducer_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+     
+     
+     scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/o*.root ./output_Latinos_25July
+     ln -s output_Latinos_25July/ output_Latinos
+     
+     scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/o*.root ./output_Latinos_9Aug
+     
+     
+          
+     Hadd DATA sample in Run ranges.
+     
+          
+          mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/
+          mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAMay10/
+          mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAAug05/
+          mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAv4/
+          mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAv6/
+          
+          hadd /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAMay10/DATAMay10.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleElectron2011AMay10/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleMuon2011AMay10/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/MuEG2011AMay10/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleElectron2011AMay10/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleMuon2011AMay10/MiBiCommonNT*.root
+          
+          hadd /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAAug05/DATAAug05.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleElectron2011AAug05/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleMuon2011AAug05/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/MuEG2011AAug05/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleElectron2011AAug05/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleMuon2011AAug05/MiBiCommonNT*.root
+          
+          hadd /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAv4/DATAv4.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleElectron2011Av4/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleMuon2011Av4/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/MuEG2011Av4/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleElectron2011Av4/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleMuon2011Av4/MiBiCommonNT*.root
+          
+          hadd /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011/DATAv6/DATAv6.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleElectron2011Av6/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/DoubleMuon2011Av6/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/MuEG2011Av6/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleElectron2011Av6/MiBiCommonNT*.root \
+          /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Aug112011DATA/SingleMuon2011Av6/MiBiCommonNT*.root
+          
+          
+          
+     
+//      
+//         mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_25July/
+//         mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_25July/DATAMay10/
+//         mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_25July/DATAv4/
+//         mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_25July/DATAv4bis/
+//      
+//         hadd /gwteraz/users/amassiro/VBF/DATA_PATLatinos_25July/DATAMay10/DATAMay10.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID092_DoubleElectron2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID091_DoubleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID093_MuEG2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul222011/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID090_SingleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root
+//      
+//      
+//         hadd /gwteraz/users/amassiro/VBF/DATA_PATLatinos_25July/DATAv4/DATAv4.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root
+//      
+//      
+//         hadd /gwteraz/users/amassiro/VBF/DATA_PATLatinos_25July/DATAv4bis/DATAv4bis.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085b_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086b_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087b_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root \
+//         /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul212011/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084b_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MiBiCommonNT*.root
+//      
+//      
+//      
+     
+     
+     
+     Then split DATA sample to fasten the procedure of ntuple making! (do it once and then we are fine ... if it takes some time it doesn't matter!)
+
+	     mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011_Divided/
+	     mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011_Divided/DATAMay10/
+	     mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011_Divided/DATAAug05/
+	     mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011_Divided/DATAv4/
+	     mkdir /gwteraz/users/amassiro/VBF/DATA_PATLatinos_16Aug2011_Divided/DATAv6/
+     
+             ./bin/SplitSampleRunRange.exe test/Latinos/testSplitSampleRunRangeDATAMay10.cfg
+             ./bin/SplitSampleRunRange.exe test/Latinos/testSplitSampleRunRangeDATAv4.cfg
+             ./bin/SplitSampleRunRange.exe test/Latinos/testSplitSampleRunRangeDATAAug05.cfg
+             ./bin/SplitSampleRunRange.exe test/Latinos/testSplitSampleRunRangeDATAv6.cfg
+             
+//         ./bin/SplitSampleRunRange.exe test/Latinos/testSplitSampleRunRangeDATAMay10.cfg
+//         ./bin/SplitSampleRunRange.exe test/Latinos/testSplitSampleRunRangeDATAv4.cfg
+//         ./bin/SplitSampleRunRange.exe test/Latinos/testSplitSampleRunRangeDATAv4bis.cfg
+     
+     
+        rm test/Latinos/dir_cfg_skimmed_DATA/NtupleProducer*
+        root -l test/Latinos/cfgCreator_DATA_HERCULES_PATtoNT.cxx
+        .q
+        root -l test/Latinos/cfgLauncher_DATA_HERCULES_PATtoNT.cxx
+        .q
+     
+     
+     And Hadd them together:
+     
+//           hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/out_NtupleProducer_DATA.root \
+//            /gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/DATAv4/out_*.root \
+//            /gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/DATAv4bis/out_*.root \
+//            /gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/DATAMay10/out_*.root 
+
+	    hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_16Aug2011_DATA/out_NtupleProducer_DATA.root \
+	      /gwteraz/users/amassiro/VBFPlainRoot/Latinos_16Aug2011_DATA/DATAv4/out_*.root \
+	      /gwteraz/users/amassiro/VBFPlainRoot/Latinos_16Aug2011_DATA/DATAv6/out_*.root \
+	      /gwteraz/users/amassiro/VBFPlainRoot/Latinos_16Aug2011_DATA/DATAAug05/out_*.root \
+	      /gwteraz/users/amassiro/VBFPlainRoot/Latinos_16Aug2011_DATA/DATAMay10/out_*.root 
+           
+     
+    And copy on laptop:     
+     
+     scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/o*.root ./output_Latinos_25July/
+     scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_DATA/out_NtupleProducer_DATA.root ./output_Latinos_25July/
+     scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/out_NtupleProducer_DATA.root ./output_Latinos_26July/
+     
+     
+     
+     
+
+     
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToEE_M-10To20_TuneZ2_7TeV-pythia6.root                   output_Latinos_25July/out_NtupleProducer_Summer11_DYToEE_M-10To20_TuneZ2_7TeV-pythia6.root
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToEE_M-20_CT10_TuneZ2_7TeV-powheg-pythia.root            output_Latinos_25July/out_NtupleProducer_Summer11_DYToEE_M-20_CT10_TuneZ2_7TeV-powheg-pythia.root
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToEE_M-20_TuneZ2_7TeV-pythia6.root                       output_Latinos_25July/out_NtupleProducer_Summer11_DYToEE_M-20_TuneZ2_7TeV-pythia6.root
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToMuMu_M-10To20_TuneZ2_7TeV-pythia6.root                 output_Latinos_25July/out_NtupleProducer_Summer11_DYToMuMu_M-10To20_TuneZ2_7TeV-pythia6.root
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToMuMu_M-20_CT10_TuneZ2_7TeV-powheg-pythia.root          output_Latinos_25July/out_NtupleProducer_Summer11_DYToMuMu_M-20_CT10_TuneZ2_7TeV-powheg-pythia.root
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToMuMu_M-20_TuneZ2_7TeV-pythia6.root                     output_Latinos_25July/out_NtupleProducer_Summer11_DYToMuMu_M-20_TuneZ2_7TeV-pythia6.root
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToTauTau_M-10To20_TuneZ2_7TeV-pythia6-tauola.root        output_Latinos_25July/out_NtupleProducer_Summer11_DYToTauTau_M-10To20_TuneZ2_7TeV-pythia6-tauola.root
+     cp output_Latinos_25July_Summer11/out_NtupleProducer_DYToTauTau_M-20_CT10_TuneZ2_7TeV-powheg-pythia-tauola.root output_Latinos_25July/out_NtupleProducer_Summer11_DYToTauTau_M-20_CT10_TuneZ2_7TeV-powheg-pythia-tauola.root
+     
+     
+     
+     
+     
+   
+     root -l test/Winter10/cfgCreator_FinalSelector_HERCULES.cxx
+     root -l test/Winter10/cfgLauncher_FinalSelection_HERCULES.cxx
+
+     rm test/Spring11/dir_cfg_skimmed/NtupleProducer_*
+     root -l test/Spring11/cfgCreator_FinalSelector_HERCULES.cxx
+     .q
+     root -l test/Spring11/cfgLauncher_FinalSelection_HERCULES.cxx
+     .q
+     
+     
+   ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   4) Plot tool.
+   From this moment on it's possible to plot distributions.
+       r00t test/Winter10/Draw.cxx\(\"nameFileWithListOfSamples\"\,\"Variable\",min, max, nbins, lumitoNormalize, \"selections\"\)
+   
+       e.g.: 
+         r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"Mjj\",0,1000,100,40.5,\"Mjj\>200\&\&Deta_RECO_q12\>1\&\&pT_RECO_l1\>20\&\&pT_RECO_q1\>20\&\&pT_RECO_q2\>20\"\)
+
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"M_qq\",0,3000,100,40.5,\"M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\"\)
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"M_ll\",0,200,100,40.5,\"M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\"\)
+	 
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"M_ll\",0,200,100,40.5,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"M_{ll}\"\)
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"M_ll\",0,200,100,40.5,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_flavour\=\=11\",\"M_{ll}\"\)
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"M_ll\",0,200,100,40.5,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_flavour\=\=13\",\"M_{ll}\"\)
+	 
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"M_qq\",0,2000,100,40.5,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"M_{qq}\"\)
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"DEta_qq\",0,10,100,40.5,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"#Delta#eta_{qq}\"\)
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"q1_pT\",0,400,50,40.5,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"p_{T}^{q1}\"\)
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"q2_pT\",0,400,50,40.5,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"p_{T}^{q1}\"\)
+	 
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"abs\(q1_Eta\)\",0,5,10,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"leading\ jet\ #eta\"\)
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"l1_pT\",0,200,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"leading\ lepton p_{T}\"\)
+	 
+	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed_ttbarComparison.txt\"\,\"l1_pT\",0,200,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"leading\ lepton\ p_{T}\",\"ttbarMadgraph\"\)
+	 
+    ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    5) Train MV discriminants or Selections for JETS
+			source test/setupMVA.sh
+			r00t test/Selector_Jets_MVA_Training.cxx\(\"MLP,MLPCat\"\)    **************** not supported
+			r00t test/TMVAGui.C\(\"output/Selector_Jets_trained.root\"\)  **************** not supported
+    
+			r00t test/Selector_Jets_MultiClass_MVA_Training.cxx\(\"MLP\"\) **************** not supported
+			r00t test/TMVAMultiClassGui.C\(\"output/Selector_MultiClass_Jets_trained.root\"\) **************** not supported
+   
+     5.1) Train a Mass dependent analysis (cuts or something else)
+			r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH160\"\)
+			r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH170\"\)
+			r00t test/TMVAGui.C\(\"output/Selector_Jets_trained_qqH160.root\"\)
+			
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH120\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH130\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH150\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH160\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH200\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH250\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH400\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"Cuts,MLPBNN,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH600\"\)
+.q
+
+
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLPBNN,MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH130\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLPBNN,MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH150\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLPBNN,MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH160\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLPBNN,MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH200\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLPBNN,MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH250\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLPBNN,MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNNCat\",\"qqH600\"\)
+.q
+
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH130\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH150\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH160\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH200\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH250\"\)
+.q
+r00t test/Selector_Jets_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH600\"\)
+.q
+
+
+     5.2) Train a Mass dependent analysis (cuts or something else) with "MultiClass"
+			r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH160\"\)
+			r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH170\"\)
+			r00t test/TMVAGui.C\(\"output/Selector_Jets_trained_qqH160.root\"\)
+
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH120\"\)
+.q
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH130\"\)
+.q
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH150\"\)
+.q
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH160\"\)
+.q
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH200\"\)
+.q
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH250\"\)
+.q
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH400\"\)
+.q
+r00t test/Selector_Jets_MultiClass_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH600\"\)
+.q
+
+
+			
+			
+			
+    ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    6) Add TMVA values in the tree
+        Program :   FinalSelection_Producer_Jet.cpp
+        to launch:  r00t test/Winter10/cfgCreator_SelectorJets.cxx
+   
+   	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"BDT_JetH160\",-1,1,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"BDT_{jet}\"\)
+   	 r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"MLP_JetH160\",-1,2,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\",\"MLP_{jet}\"\)
+
+   
+ 
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(120\)
+.q
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(130\)
+.q
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(150\)
+.q
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(160\)
+.q
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(200\)
+.q
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(250\)
+.q
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(400\)
+.q
+r00t test/Winter10/cfgCreator_SelectorJets.cxx\(600\)
+.q
+
+
+
+
+r00t test/Spring11/cfgCreator_SelectorJets.cxx\(130\)
+.q
+r00t test/Spring11/cfgCreator_SelectorJets.cxx\(150\)
+.q
+r00t test/Spring11/cfgCreator_SelectorJets.cxx\(160\)
+.q
+r00t test/Spring11/cfgCreator_SelectorJets.cxx\(200\)
+.q
+r00t test/Spring11/cfgCreator_SelectorJets.cxx\(250\)
+.q
+r00t test/Spring11/cfgCreator_SelectorJets.cxx\(600\)
+.q
+
+
+    ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    7) Plot at each step of the analysis
+         Program :  counterAndPlot.cpp
+         to launch:  ./bin/counterAndPlot.exe test/Winter10/samples_skimmed.txt 36.0
+                        where
+			  test/Winter10/samples_skimmed.txt is the list of samples to be considered
+			  36.0 is the luminosity analysed
+         
+         Plot the number of events from data and from MC expectations
+         at each step of the analysis.
+         Steps of the analysis are hardcoded!
+         Pull plot is drawn.
+   
+    ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    8) Train MV discriminants or Selections for LEPTONS
+			r00t test/Selector_Leptons_MultiClass_MVA_Training_MassDependent.cxx\(\"MLP\"\)
+			r00t test/TMVAMultiClassGui.C\(\"output/Selector_Leptons_trained_multiclass_qqH160.root\"\)
+   
+     8.1) Train a Mass dependent analysis (cuts or something else)
+			r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH160\"\)
+			r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD\",\"qqH170\"\)
+
+
+			
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH120\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH130\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH150\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH160\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH200\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH250\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH400\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"CutsCat,Cuts,MLP,BDT,MLPCat,CutsGA,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH600\"\)
+.q
+
+
+
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH130\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH150\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH160\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH200\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH250\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP\",\"qqH600\"\)
+.q
+
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH130\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH150\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH160\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH200\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH250\"\)
+.q
+r00t test/Selector_Leptons_MVA_Training_MassDependent.cxx\(\"MLP,BDT,MLPCat,Likelihood,LikelihoodD,MLPBNN,MLPBNNCat\",\"qqH600\"\)
+.q
+
+		
+			
+			r00t test/TMVAGui.C\(\"output/Selector_Leptons_trained_qqH160.root\"\)
+			
+			
+    ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    8) Add TMVA values in the tree
+        Program :   FinalSelection_Producer_Lepton.cpp
+        to launch:  r00t test/Winter10/cfgCreator_SelectorLeptons.cxx
+   
+			r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"BDT_LepH160\",-1,1,100,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"BDT_{lep}\"\)
+			r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"MLP_LepH160\",-1,2,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"MLP_{lep}\"\)
+			r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"LikelihoodD_LepH160\",-1,2,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"LikelohoodD_{lep}\"\)
+			r00t test/Winter10/Draw.cxx\(\"test/Winter10/samples_skimmed.txt\"\,\"MLPCat_LepH160\",-1,2,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"MLPCat_{lep}\"\)
+			
+   
+   
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(120\)
+.q
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(130\)
+.q
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(150\)
+.q
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(160\)
+.q
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(200\)
+.q
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(250\)
+.q
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(400\)
+.q
+r00t test/Winter10/cfgCreator_SelectorLeptons.cxx\(600\)
+.q
+
+
+
+r00t test/Spring11/cfgCreator_SelectorLeptons.cxx\(130\)
+.q
+r00t test/Spring11/cfgCreator_SelectorLeptons.cxx\(150\)
+.q
+r00t test/Spring11/cfgCreator_SelectorLeptons.cxx\(160\)
+.q
+r00t test/Spring11/cfgCreator_SelectorLeptons.cxx\(200\)
+.q
+r00t test/Spring11/cfgCreator_SelectorLeptons.cxx\(250\)
+.q
+r00t test/Spring11/cfgCreator_SelectorLeptons.cxx\(600\)
+.q
+
+   
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"MLPCat_LepH160\",-1,2,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"MLPCat_{lep}\",\"qqH160\"\)
+
+
+
+
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"acos\(\(l2_pX*met_X+l2_pY*met_Y\)/\(sqrt\(l2_pX*l2_pX+l2_pY*l2_pY\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\)\",0,3.14159266,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"#phi_{lep2-met}\",\"qqH160\"\)
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"acos\(\(l1_pX*met_X+l1_pY*met_Y\)/\(sqrt\(l1_pX*l1_pX+l1_pY*l1_pY\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\)\",0,3.14159266,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"#phi_{lep1-met}\",\"qqH160\"\)
+
+
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"acos\(\(l1_pX*met_X+l1_pY*met_Y\)/\(sqrt\(l1_pX*l1_pX+l1_pY*l1_pY\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\)\",0,3.14159266,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\&\&met\>10\",\"#phi_{lep1-met}\",\"qqH160\"\)
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"acos\(\(l1_pX*met_X+l1_pY*met_Y\)/\(sqrt\(l1_pX*l1_pX+l1_pY*l1_pY\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\)\",0,3.14159266,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\&\&l1_flavour\=\=13\",\"#phi_{lep1-met}\",\"qqH160\"\)
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"acos\(\(l1_pX*met_X+l1_pY*met_Y\)/\(sqrt\(l1_pX*l1_pX+l1_pY*l1_pY\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\)\",0,3.14159266,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\&\&l1_flavour\=\=11\",\"#phi_{lep1-met}\",\"qqH160\"\)
+
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"\(l1_pX*met_X+l1_pY*met_Y\)/\(sqrt\(l1_pX*l1_pX+l1_pY*l1_pY\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\",-2,2,200,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\&\&l1_flavour\=\=13\",\"#phi_{lep1-met}\",\"qqH160\"\)
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"\(l1_pX*met_X+l1_pY*met_Y\)/\(sqrt\(l1_pX*l1_pX+l1_pY*l1_pY\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\",-2,2,200,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\&\&l1_flavour\=\=11\",\"#phi_{lep1-met}\",\"qqH160\"\)
+
+
+//==== P_T Lep
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"acos\(\(\(l1_pX+l2_pX\)*met_X+\(l1_pY+l2_pY\)*met_Y\)/\(sqrt\(\(l1_pX+l2_pX\)*\(l1_pX+l2_pX\)+\(l1_pY+l2_pY\)*\(l1_pY+l2_pY\)\)*sqrt\(met_X*met_X+met_Y*met_Y\)\)\)\",0,3.14159266,20,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\",\"#phi_{leplep-met}\",\"qqH160\"\)
+
+
+//==== P_T Balance
+r00t test/Winter10/Draw.cxx\(\"test/samples_skimmed_WithPU.txt\"\,\"sqrt\(\(l1_pX+l2_pX+met_X+q1_pX+q2_pX\)^2+\(l1_pY+l2_pY+q1_pY+q2_pY+met_Y\)^2\)\",0,500,100,36.0,\"M_ll\>10\&\&M_qq\>200\&\&DEta_qq\>1\&\&l1_pT\>20\&\&q1_pT\>15\&\&q2_pT\>15\&\&l1_charge*l2_charge\<0\&\&met\>10\",\"p_{T}^{BALANCE}\",\"qqH160\"\)
+
+
+
+    ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    9) New tools for plot and counting experiment
+       Counting tool for Data/MC comparison after a each step of the analysis (defined in a list of cuts!)
+        Program :   counterAndPlot.cpp
+        to launch:  ./bin/counterAndPlot.exe test/testCounterAndPlot.cfg
+   
+
+        Data/MC comparison of a set of distributions (defined in a list of variables) after a each step of the analysis (defined in a list of cuts!)
+        Program :   MCDATAComparisonPLOTTool.cpp
+        to launch:  ./bin/MCDATAComparisonPLOTTool.exe test/testMCDATAComparisonPLOTTool.cfg
+        
+        
+
+
+
+///~~~ Luminosity calculation
+ls -alrth -d */ | grep -v CVS | grep -v multi | awk '{print "mkdir ~/public/html/MiBiCommonNT/DATA25June2011/"$9"; \ncp "$9"/res/lumiSummary.json ~/public/html/MiBiCommonNT/DATA25June2011/"$9}'
+ls -alrth -d */ | grep -v CVS | grep -v multi | awk '{print "wget  http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/DATA25June2011/"$9"/lumiSummary.json -O DE.json"}'
+
+wget  http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/DATA25June2011/DoubleMu_Run2011A-PromptReco-v4//lumiSummary.json -O DM1.json
+wget  http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/DATA25June2011/DoubleElectron_Run2011A-PromptReco-v4//lumiSummary.json -O DE1.json
+wget  http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/DATA25June2011/MuEG_Run2011A-PromptReco-v4//lumiSummary.json -O EM1.json
+
+wget  http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/DATA25June2011/DoubleMu_Run2011A-May10ReReco-v1//lumiSummary.json -O DM2.json
+wget  http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/DATA25June2011/DoubleElectron_Run2011A-May10ReReco-v1//lumiSummary.json -O DE2.json
+wget  http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/DATA25June2011/MuEG_Run2011A-May10ReReco-v1//lumiSummary.json -O EM2.json
+
+
+compareJSON.py --and DM1.json DE1.json AND1.json 
+compareJSON.py --and AND1.json EM1.json AND1.json 
+compareJSON.py --and AND1.json /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions11/7TeV/Prompt/Cert_160404-167151_7TeV_PromptReco_Collisions11_JSON.txt AND1.json 
+
+compareJSON.py --and DM2.json DE2.json AND2.json 
+compareJSON.py --and AND2.json EM2.json AND2.json 
+compareJSON.py --and AND2.json /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions11/7TeV/Prompt/Cert_160404-167151_7TeV_PromptReco_Collisions11_JSON.txt AND2.json 
+
+compareJSON.py --or AND1.json AND2.json OR.json 
+
+			    
+			    
+			    
+
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data30Apr2011/DoubleMu_Run2011A-PromptReco-v2/lumiSummary.json -O DE.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data30Apr2011/DoubleElectron_Run2011A-PromptReco-v2/lumiSummary.json -O DE.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data30Apr2011/DoubleMu_Run2011A-PromptReco-v2/lumiSummary.json -O DM.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data30Apr2011/ElectronHad_Run2011A-PromptReco-v2//lumiSummary.json -O EH.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data30Apr2011/MuHad_Run2011A-PromptReco-v2/lumiSummary.json -O MH.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data30Apr2011/MuEG_Run2011A-PromptReco-v2/lumiSummary.json -O EM.json
+
+rm AND.json
+touch AND.json
+compareJSON.py --and DM.json DE.json AND.json 
+compareJSON.py --and AND.json EM.json AND.json 
+compareJSON.py --and AND.json EH.json AND.json 
+compareJSON.py --and AND.json MH.json AND.json 
+
+
+compareJSON.py --and AND.json /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions11/7TeV/Prompt/Cert_160404-163757_7TeV_PromptReco_Collisions11_JSON.txt AND.json 
+
+lumiCalc.py -c frontier://LumiCalc/CMS_LUMI_PROD -i AND.json --nowarning overview 
+
+
+
+
+
+
+
+
+
+
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/SingleElectron_Run2011A-PromptReco-v2/lumiSummary.json -O SE2.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/SingleMu_Run2011A-PromptReco-v2/lumiSummary.json -O SM2.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/DoubleElectron_Run2011A-PromptReco-v2/lumiSummary.json -O DE2.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/DoubleMu_Run2011A-PromptReco-v2/lumiSummary.json -O DM2.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/MuEG_Run2011A-PromptReco-v2/lumiSummary.json -O EM2.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/ElectronHad_Run2011A-PromptReco-v2/lumiSummary.json -O EH2.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/MuHad_Run2011A-PromptReco-v2/lumiSummary.json -O MH2.json
+
+
+
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/SingleElectron_Run2011A-PromptReco-v1/lumiSummary.json -O SE1.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/SingleMu_Run2011A-PromptReco-v1/lumiSummary.json -O SM1.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/DoubleElectron_Run2011A-PromptReco-v1/lumiSummary.json -O DE1.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/DoubleMu_Run2011A-PromptReco-v1/lumiSummary.json -O DM1.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/MuEG_Run2011A-PromptReco-v1/lumiSummary.json -O EM1.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/ElectronHad_Run2011A-PromptReco-v1/lumiSummary.json -O EH1.json
+wget http://cmsdoc.cern.ch/~amassiro/MiBiCommonNT/Data12May2011/MuHad_Run2011A-PromptReco-v1/lumiSummary.json -O MH1.json
+
+
+rm AND1.json
+touch AND1.json
+
+compareJSON.py --and DM1.json DE1.json AND1.json 
+compareJSON.py --and AND1.json EM1.json AND1.json 
+
+
+
+rm AND2.json
+touch AND2.json
+
+compareJSON.py --and DM2.json DE2.json AND2.json 
+compareJSON.py --and AND2.json EM2.json AND2.json 
+
+
+
+compareJSON.py --and AND2.json /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions11/7TeV/Prompt/Cert_160404-163869_7TeV_PromptReco_Collisions11_JSON.txt AND2.json 
+
+lumiCalc.py -c frontier://LumiCalc/CMS_LUMI_PROD -i AND2.json --nowarning overview -b stable
+
+
+
+
+compareJSON.py --and AND1.json /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions11/7TeV/Prompt/Cert_160404-163869_7TeV_PromptReco_Collisions11_JSON.txt AND1.json 
+
+lumiCalc.py -c frontier://LumiCalc/CMS_LUMI_PROD -i AND1.json --nowarning overview -b stable
+
+
+
+
+| Delivered LS | Delivered (/?b) | Selected LS | Recorded (/?b) |
+-------------------------------------------------------------------
+|        14935 |    144932170.084 |        4645 |    49663744.952 |
+
+
+| Delivered LS | Delivered (/?b) | Selected LS | Recorded (/?b) |
+-------------------------------------------------------------------
+|        68672 |    941500653.204 |       41999 |   556421964.382 |
+
+
+
+
+rm newAND1.json
+compareJSON.py --and test/crab/DATA3/DoubleElectron_Run2011A-PromptReco-v1/res/lumiSummary.json test/crab/DATA3/DoubleMu_Run2011A-PromptReco-v1/res/lumiSummary.json newAND1.json
+compareJSON.py --and test/crab/DATA3/MuEG_Run2011A-PromptReco-v1/res/lumiSummary.json newAND1.json newAND1.json
+
+rm newAND2.json
+compareJSON.py --and test/crab/DATA3/DoubleElectron_Run2011A-PromptReco-v2/res/lumiSummary.json test/crab/DATA3/DoubleMu_Run2011A-PromptReco-v2/res/lumiSummary.json newAND2.json
+compareJSON.py --and test/crab/DATA3/MuEG_Run2011A-PromptReco-v2/res/lumiSummary.json newAND2.json newAND2.json
+
+
+compareJSON.py --and newAND1.json /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions11/7TeV/Prompt/Cert_160404-163869_7TeV_PromptReco_Collisions11_JSON.txt newAND1.json 
+compareJSON.py --and newAND2.json /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions11/7TeV/Prompt/Cert_160404-163869_7TeV_PromptReco_Collisions11_JSON.txt newAND2.json 
+
+lumiCalc.py -c frontier://LumiCalc/CMS_LUMI_PROD -i newAND1.json --nowarning overview -b stable
+lumiCalc.py -c frontier://LumiCalc/CMS_LUMI_PROD -i newAND2.json --nowarning overview -b stable
+
+
+
+[cmsmi4] /data2/amassiro/NTUPLE/Releases/CMSSW_4_1_5/src/PhysicsTools/MiBiCommonPAT > ls /data2/amassiro/NTUPLE/forHerculesMC12May2011/ | awk '{print "rsync -avz -e ssh /data2/amassiro/NTUPLE/forHerculesMC12May2011/"$1"/*.root amassiro@hercules.mib.infn.it:/gwteray/users/amassiro/MiBiCommonNT/MC_v6/"$1"/"}'
+rfdir /castor/cern.ch/user/a/amassiro/NTUPLES/MiBiCommonNT/MC_v6/  | awk '{print "syncCastor /castor/cern.ch/user/a/amassiro/NTUPLES/MiBiCommonNT/MC_v6/"$9" /data2/amassiro/NTUPLE/forHerculesMC12May2011/"$9}' &> mio.tx
+rfdir /castor/cern.ch/user/a/amassiro/NTUPLES/MiBiCommonNT/MC_v6/ | grep -v VBF | grep -v GluGlu | awk '{print "mkdir /data2/amassiro/NTUPLE/forHerculesMC12May2011/"$9"  \nrfcpCastor /castor/cern.ch/user/a/amassiro/NTUPLES/MiBiCommonNT/MC_v6/"$9" /data2/amassiro/NTUPLE/forHerculesMC12May2011/"$9}' &> mio2.tx
+
+
+
+///==== Data Driven ====
+Sideband:
+ ___________
+      |
+   A  |  B
+ _____|_____
+      
+from MC: B_MC / A_MC 
+in this way I scale for
+    xsection * efifciency_up_to_that_point
+
+./bin/Sideband1D.exe test/testSideband1D.cfg
+
+
+
+
+
+
+
+
+
+
+
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+On hercules:
+
+source  /gwpool/initcms/root-standalone.sh
+cd /gwpool/users/amassiro/VBF/Analysis/Spring11/PlotAndLands
+
+
+perl scripts/launchJobsDataCard_hercules.pl scripts/params_hercules_dataCard.cfg
+
+perl scripts/getResults_hercules.pl scripts/params_hercules_dataCard.cfg
+ls
+cat results_H???.txt > results.txt 
+more results.txt 
+root scripts/Draw_Plot.cxx
+
+
+
+to scale dataCard to new xsection
+
+
+root -l normalizeDataCard.cxx\(\"data/dataCard_H190.txt\",\"test.txt\",10,7\)
+ls dataAN/dataCard_H???.txt | awk '{print "root -l normalizeDataCard.cxx\\(\\@"$1"\\@,\\@"$1".new\\@,5.46,7\\) \n .q"}' | tr "@" "\"" 
+ls dataAN/dataCard_H???.txt | awk '{print "root -l normalizeDataCard.cxx\\(\\@"$1"\\@,\\@"$1".new\\@,5.46,7\\) \n .q"}' | tr "@" "\"" 
+
+
+
+root -l normalizeDataCard.cxx\(\"dataAN/dataCard_H150.txt\",\"dataAN/dataCard_H160.txt.new\",5.46,7\) 
+.q
+root -l normalizeDataCard.cxx\(\"dataAN/dataCard_H180.txt\",\"dataAN/dataCard_H180.txt.new\",5.46,7\) 
+.q
+root -l normalizeDataCard.cxx\(\"dataAN/dataCard_H190.txt\",\"dataAN/dataCard_H190.txt.new\",5.46,7\) 
+.q
+root -l normalizeDataCard.cxx\(\"dataAN/dataCard_H200.txt\",\"dataAN/dataCard_H200.txt.new\",5.46,7\) 
+.q
+root -l normalizeDataCard.cxx\(\"dataAN/dataCard_H250.txt\",\"dataAN/dataCard_H250.txt.new\",5.46,7\) 
+.q
+root -l normalizeDataCard.cxx\(\"dataAN/dataCard_H600.txt\",\"dataAN/dataCard_H600.txt.new\",5.46,7\) 
+.q
+
+														    
+exstrapolation to 1fb-1
+root -l scripts/Draw_Plot.cxx\(0\) 
+
+perl scripts/launchJobsDataCard_hercules.pl scripts/params_hercules_dataCard.cfg
+
+perl scripts/getResults_hercules.pl scripts/params_hercules_dataCard.cfg
+ls
+cat results_H???.txt.new > results.txt 
+more results.txt 
+root -l scripts/Draw_Plot.cxx\(0\)
+
+cat  dataAN/dataCard_H???.txt.new | grep rate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### MIT ###
+
+
+
+
+root -l test/normalizeDataCard.cxx\(\"dataCard_H120.txt\",\"dataCard_H120.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H130.txt\",\"dataCard_H130.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H150.txt\",\"dataCard_H150.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H160.txt\",\"dataCard_H160.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H180.txt\",\"dataCard_H180.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H190.txt\",\"dataCard_H190.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H200.txt\",\"dataCard_H200.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H250.txt\",\"dataCard_H250.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H400.txt\",\"dataCard_H400.txt.MIT\",5.46,7\) 
+.q
+root -l test/normalizeDataCard.cxx\(\"dataCard_H600.txt\",\"dataCard_H600.txt.MIT\",5.46,7\) 
+.q
+
+cat  dataCard_H???.txt.MIT | grep rate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### list of instructions to follow "blindly"####
+
+
+
+
+rm -rf /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/*
+rm -rf /gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/*
+rm -rf /gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/*
+
+
+
+
+rm test/Latinos/dir_cfg_skimmed_MC/NtupleProducer*
+root -l test/Latinos/cfgCreator_MC_HERCULES_PATtoNT.cxx
+.q
+root -l test/Latinos/cfgLauncher_MC_HERCULES_PATtoNT.cxx
+.q
+
+rm test/Latinos/dir_cfg_skimmed_MC_Summer11/NtupleProducer*
+root -l test/Latinos/cfgCreator_MC_HERCULES_PATtoNT_Summer11.cxx
+.q
+root -l test/Latinos/cfgLauncher_MC_HERCULES_PATtoNT_Summer11.cxx
+.q
+
+
+
+ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/  | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/out_NtupleProducer_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+ls -l /gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/   | grep "d" | awk '{print "hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/out_NtupleProducer_Summer11_"$9".root  /gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/"$9"/out_NtupleProducer_*.root"}'   | /bin/sh
+
+
+mkdir output_Latinos_25July_new
+scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_25Jul2011_Spring11/o*.root ./output_Latinos_25July_new
+scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_9Aug2011_Summer11/o*.root ./output_Latinos_25July_new
+
+
+rm test/Latinos/dir_cfg_skimmed_DATA/NtupleProducer*
+root -l test/Latinos/cfgCreator_DATA_HERCULES_PATtoNT.cxx
+.q
+root -l test/Latinos/cfgLauncher_DATA_HERCULES_PATtoNT.cxx
+.q
+
+
+hadd /gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/out_NtupleProducer_DATA.root \
+/gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/DATAv4/out_*.root \
+/gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/DATAv4bis/out_*.root \
+/gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/DATAMay10/out_*.root 
+
+scp amassiro@hercules.mib.infn.it:/gwteraz/users/amassiro/VBFPlainRoot/Latinos_26Jul2011_DATA/out_NtupleProducer_DATA.root ./output_Latinos_25July_new/
+
+
+
+

@@ -1,0 +1,37 @@
+###################################
+#### Cut for Analysis workflow ####
+###################################
+#
+############################
+#### #
+#### # all events
+#### #
+#### # mumu #    channel == 0
+#### # mue #     channel == 3
+#### # emu #     channel == 2
+#### # ee #      channel == 1
+#### #
+############################
+#
+# @WW level 2 jet -- looser cuts
+#
+1            &&      trigger==1. && pfmet>20. && mll>12 && zveto==1 && mpmet>20. &&  nextra==0 &&    (pfmet > 20.0)    && njet==2   && jettche1>0 && jettche2>0
+sameflav     &&      trigger==1. && pfmet>20. && mll>12 && zveto==1 && mpmet>20. &&  nextra==0 &&    (pfmet > 20.0)    && njet==2   && jettche1>0 && jettche2>0 
+(!sameflav)  &&      trigger==1. && pfmet>20. && mll>12 && zveto==1 && mpmet>20. &&  nextra==0 &&    (pfmet > 20.0)    && njet==2   && jettche1>0 && jettche2>0 
+#
+#
+# for DY rough scale factor
+1            &&      trigger==1. && pfmet>20. && mll>12             && mpmet>20. &&  nextra==0 &&    (pfmet > 20.0)    && njet==2   && jettche1>0 && jettche2>0 
+channel==0   &&      trigger==1. && pfmet>20. && mll>12             && mpmet>20. &&  nextra==0 &&    (pfmet > 20.0)    && njet==2   && jettche1>0 && jettche2>0 
+channel==1   &&      trigger==1. && pfmet>20. && mll>12             && mpmet>20. &&  nextra==0 &&    (pfmet > 20.0)    && njet==2   && jettche1>0 && jettche2>0 
+#
+# for top rough scale factor
+1            &&      trigger==1. && pfmet>20. && mll>12             && mpmet>20. &&  nextra==0 &&    (pfmet > 20.0)    && njet==2   && jettche1>2 && jettche2>2 
+#
+#
+############################
+#
+#
+#
+#
+#

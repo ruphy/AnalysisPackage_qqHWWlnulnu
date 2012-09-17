@@ -1,0 +1,10 @@
+CVS/*
+*~
+*.root
+*.so
+*.exe
+bin/
+lib/
+plots/
+obj/
+output_Latinos_tree_2012_SUSY_2jet/

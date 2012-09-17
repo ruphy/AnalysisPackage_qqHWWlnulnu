@@ -1,0 +1,15 @@
+### Name       Min   Max   NBin    NameHR        Name       Min   Max   NBin    NameHR
+#   X                                            Y
+#   2D distributions
+#
+#
+#### standard ####
+DEta_qq         0     10    20    #Delta#eta_{jet-jet}            M_qq            0   2000   30    M_{jet-jet}
+DEta_qq         0     10    20    #Delta#eta_{jet-jet}            CJV_30          0      5     5    CJV_{p_{T}>30}
+met             0    150    20    MET(GeV)                        M_ll            0    400   20    M_{l,l}
+met             0    200    30    MET(GeV)                        pmet            0    200   30    proj-MET(GeV)
+l2_pT           0    300   30    p_{T}^{l-low}                    M_ll            0    400   20    M_{l,l}
+l1_pT           0    300   30    p_{T}^{l-high}                   M_ll            0    400   20    M_{l,l}
+
+
+

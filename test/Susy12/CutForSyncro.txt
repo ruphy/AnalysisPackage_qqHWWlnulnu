@@ -1,0 +1,17 @@
+###################################
+#### Cut for Analysis workflow ####
+###################################
+#### Syncronization ####
+########################
+#
+M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && (((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>20 && (l1_flavour!=l2_flavour)) || ((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>40 && (l1_flavour==l2_flavour))) && ((!(M_ll<106.1876&&M_ll>76.1876&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && q2_bTag_trackCountingHighEffBJetTags<2.1 && q1_bTag_trackCountingHighEffBJetTags<2.1 && NBjets_trackCountingHighEffBJetTags_210_softJet==0
+# mumu
+l1_flavour == 13 && l2_flavour == 13   &&    M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && (((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>20 && (l1_flavour!=l2_flavour)) || ((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>40 && (l1_flavour==l2_flavour))) && ((!(M_ll<106.1876&&M_ll>76.1876&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && q2_bTag_trackCountingHighEffBJetTags<2.1 && q1_bTag_trackCountingHighEffBJetTags<2.1 && NBjets_trackCountingHighEffBJetTags_210_softJet==0
+# emu 
+l1_flavour == 11 && l2_flavour == 13   &&    M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && (((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>20 && (l1_flavour!=l2_flavour)) || ((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>40 && (l1_flavour==l2_flavour))) && ((!(M_ll<106.1876&&M_ll>76.1876&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && q2_bTag_trackCountingHighEffBJetTags<2.1 && q1_bTag_trackCountingHighEffBJetTags<2.1 && NBjets_trackCountingHighEffBJetTags_210_softJet==0
+# mue 
+l1_flavour == 13 && l2_flavour == 11   &&    M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && (((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>20 && (l1_flavour!=l2_flavour)) || ((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>40 && (l1_flavour==l2_flavour))) && ((!(M_ll<106.1876&&M_ll>76.1876&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && q2_bTag_trackCountingHighEffBJetTags<2.1 && q1_bTag_trackCountingHighEffBJetTags<2.1 && NBjets_trackCountingHighEffBJetTags_210_softJet==0
+# ee
+l1_flavour == 11 && l2_flavour == 11   &&    M_ll>12 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && (((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>20 && (l1_flavour!=l2_flavour)) || ((abs(pchmet)*(abs(pchmet)<pmet)+pmet*(abs(pchmet)>=pmet))>40 && (l1_flavour==l2_flavour))) && ((!(M_ll<106.1876&&M_ll>76.1876&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && q2_bTag_trackCountingHighEffBJetTags<2.1 && q1_bTag_trackCountingHighEffBJetTags<2.1 && NBjets_trackCountingHighEffBJetTags_210_softJet==0
+#
+#

@@ -1,0 +1,6 @@
+weight_electron(l1_pT,l1_Eta,l1_flavour,l2_pT,l2_Eta,l2_flavour)
+
+
+weight_electron(treeJetLepVect[iSample]->GetLeaf("l1_pT")->GetValue(),treeJetLepVect[iSample]->GetLeaf("l1_Eta")->GetValue(),treeJetLepVect[iSample]->GetLeaf("l1_flavour")->GetValue(),treeJetLepVect[iSample]->GetLeaf("l2_pT")->GetValue(),treeJetLepVect[iSample]->GetLeaf("l2_Eta")->GetValue(),treeJetLepVect[iSample]->GetLeaf("l2_flavour")->GetValue())
+
+

@@ -1,0 +1,68 @@
+***********************************************************************
+**** join data sample to get unique root file for each data sample ****
+***********************************************************************
+
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085b_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085b_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085b_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085b_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086b_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086b_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086b_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086b_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID091_DoubleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID091_DoubleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID091_DoubleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID091_DoubleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087b_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087b_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087b_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087b_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID093_MuEG2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID093_MuEG2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID093_MuEG2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID093_MuEG2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084b_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084b_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084b_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084b_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID090_SingleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/ 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID090_SingleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID090_SingleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul102011/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID090_SingleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID092_DoubleElectron2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/ ; 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID092_DoubleElectron2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID092_DoubleElectron2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul122011/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID092_DoubleElectron2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/ ; 
+ hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER.root  /gwtera/cms/users/amassiro/MiBiCommonNT/PATtoNT/DATA/Jul122011/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+ 
+
+
+************************************************
+**** Join data sample from the same period  ****
+************************************************
+
+
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DATAMay10/ 
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DATAv4/ 
+mkdir /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DATAv4bis/ 
+
+hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DATAMay10/DATAMay10.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID091_DoubleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID090_SingleMu2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID093_MuEG2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID092_DoubleElectron2011AReRecoMay10-42cf56648d98da6378fed06fcca38e14_USER/*.root
+
+hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DATAv4/DATAv4.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+
+
+hadd /gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DATAv4bis/DATAv4bis.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleElectron_mangano-R42X_S1_V04_S2_V01_S3_V00_ID085b_DoubleElectron2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/DoubleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID086b_DoubleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/SingleMu_mangano-R42X_S1_V04_S2_V01_S3_V00_ID084b_SingleMuon2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root \
+/gwteraz/users/amassiro/VBF/Spring11_12July_MCandDATA_PATLatinos/MuEG_mangano-R42X_S1_V04_S2_V01_S3_V00_ID087b_MuEG2011Av4-42cf56648d98da6378fed06fcca38e14_USER/*.root
+
+
+
+
+
+
+
+
+
+

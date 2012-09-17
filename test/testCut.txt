@@ -1,0 +1,153 @@
+###################################
+#### Cut for Analysis workflow ####
+###################################
+#
+###################
+# Susy bbH>tautau #
+###################
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>20 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1 && (l1_flavour!=l2_flavour) && q2_bTag_trackCountingHighPurBJetTags>1.0 && q1_bTag_trackCountingHighPurBJetTags>1.0
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>20 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1 && (l1_flavour==11 && l2_flavour==11) && q2_bTag_trackCountingHighPurBJetTags>1.0 && q1_bTag_trackCountingHighPurBJetTags>1.0
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>20 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1 && (l1_flavour==13 && l2_flavour==13) && q2_bTag_trackCountingHighPurBJetTags>1.0 && q1_bTag_trackCountingHighPurBJetTags>1.0
+##############################################
+# qqH160 & qqH180 & qqH190 & qqH150 & qqH200 #
+##############################################
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<1.0 && q1_bTag_trackCountingHighPurBJetTags<1.0
+#
+############################################
+#### Final Cut ####
+# l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>4.0 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+############################################
+#
+# for plotting
+#
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+# ee
+#
+#   l1_flavour == 11 && l2_flavour == 11 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+# mumu
+#
+#   l1_flavour == 13 && l2_flavour == 13 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+#emu
+#
+#   l1_flavour != l2_flavour             && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#
+#
+# H160 cut #
+l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 <= 1 && Nleptons_pT10==0
+l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && Nleptons_pT10==0 && M_qq>300 && DEta_qq>3.5
+l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+# ee
+#   l1_flavour == 11 && l2_flavour == 11 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   l1_flavour == 11 && l2_flavour == 11 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 <= 1 && Nleptons_pT10==0
+#   l1_flavour == 11 && l2_flavour == 11 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && Nleptons_pT10==0 && M_qq>300 && DEta_qq>3.5
+#   l1_flavour == 11 && l2_flavour == 11 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   l1_flavour == 11 && l2_flavour == 11 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+# mumu
+#   l1_flavour == 13 && l2_flavour == 13 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   l1_flavour == 13 && l2_flavour == 13 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 <= 1 && Nleptons_pT10==0
+#   l1_flavour == 13 && l2_flavour == 13 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && Nleptons_pT10==0 && M_qq>300 && DEta_qq>3.5
+#   l1_flavour == 13 && l2_flavour == 13 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   l1_flavour == 13 && l2_flavour == 13 && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+# emu 
+#   l1_flavour != l2_flavour             && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   l1_flavour != l2_flavour             && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 <= 1 && Nleptons_pT10==0
+#   l1_flavour != l2_flavour             && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<100&&M_ll>80&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && Nleptons_pT10==0 && M_qq>300 && DEta_qq>3.5
+#   l1_flavour != l2_flavour             && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   l1_flavour != l2_flavour             && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && (l2_flavour == 13 || l2_pT>15) && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#
+#
+#    l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && ((!(M_ll<110&&M_ll>70&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 <= 1 && Nleptons_pT10==0
+#    l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<110&&M_ll>70&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 <= 1 && Nleptons_pT10==0
+#    l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<110&&M_ll>70&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && Nleptons_pT10==0
+#    l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((!(M_ll<110&&M_ll>70&&l1_flavour==l2_flavour))||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && Nleptons_pT10==0 && M_qq>300 && DEta_qq>3.5
+#    l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#    l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && pmet > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#    
+#    
+#    
+# different flavour preselection
+# l1_flavour!=l2_flavour && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1
+#
+# by MIT
+#
+#   (q1_Eta*q2_Eta)<0 && DEta_qq>4.5 && M_qq>450 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0 && q1_pT>30 && q2_pT>30 && CJV_30==0 && l1_pT>15 && l2_pT>15 && (l1_tkIso+l1_emIso+l1_hadIso)/l1_pT<0.1  && (l2_tkIso+l2_emIso+l2_hadIso)/l2_pT<0.1 && met>30 && ((M_ll<75&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0
+#
+# for CJV studies and JES
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && met > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_20 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && met > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_30 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && met > 30 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && CJV_40 == 0 && M_qq>300 && DEta_qq>3.5 && DPhi_ll<1.5 && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5  && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#
+#
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#
+# for plotting
+#
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+# emu
+#   (l1_flavour!=l2_flavour) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   (l1_flavour!=l2_flavour) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0
+#   (l1_flavour!=l2_flavour) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   (l1_flavour!=l2_flavour) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+# ee
+#   (l1_flavour==11 && l2_flavour==11) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   (l1_flavour==11 && l2_flavour==11) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0
+#   (l1_flavour==11 && l2_flavour==11) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   (l1_flavour==11 && l2_flavour==11) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+# mumu
+#   (l1_flavour==13 && l2_flavour==13) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1
+#   (l1_flavour==13 && l2_flavour==13) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0
+#   (l1_flavour==13 && l2_flavour==13) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#   (l1_flavour==13 && l2_flavour==13) && l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<2.0 && q1_bTag_trackCountingHighPurBJetTags<2.0
+#
+# for ttbar analysis
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>15 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && met>30 && DPhi_ll<1.5 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+###
+### test for sideband ###
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && l1_flavour==l2_flavour
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>30 && l1_charge * l2_charge == -1 && M_qq>300 && DEta_qq>3.5 && CJV_30 == 0 && l1_flavour!=l2_flavour
+#
+#
+#
+###################
+# qqH120 & qqH130 #
+###################
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>100 && DEta_qq>3.5 && CJV_30 == 0
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>100 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.2 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>20 && l2_pT>10 && q1_pT>20 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>100 && DEta_qq>3.5 && CJV_30 == 0 && met>30 && DPhi_ll<1.2 && ((M_ll<70&&M_ll>10&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<1.5 && q1_bTag_trackCountingHighPurBJetTags<1.5
+#
+#
+#
+##########
+# qqH250 #
+##########
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>200 && DEta_qq>4.5 && CJV_30 == 0
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>200 && DEta_qq>4.5 && CJV_30 == 0 && met>30 && DPhi_ll<2.5  && ((((M_ll<80&&M_ll>10))&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5
+#  l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>200 && DEta_qq>4.5 && CJV_30 == 0 && met>30 && DPhi_ll<2.5  && ((((M_ll<80&&M_ll>10))&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<0.7 && q1_bTag_trackCountingHighPurBJetTags<0.7  
+#
+#
+#
+##########
+# qqH600 #
+##########
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>200 && DEta_qq>5.5 && CJV_30 <= 1
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>200 && DEta_qq>5.5 && CJV_30 <= 1 && met>40 && DPhi_ll>1.5  && ((((M_ll<80&&M_ll>10)||(M_ll>100))&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5
+#   l1_emIso/l1_pT<0.1 && l2_emIso/l2_pT<0.1 && l1_hadIso/l1_pT<0.1 && l2_hadIso/l2_pT<0.1 && M_ll>10 && l1_pT>30 && l2_pT>20 && q1_pT>30 && q2_pT>20 && l1_charge * l2_charge == -1 && M_qq>200 && DEta_qq>5.5 && CJV_30 <= 1 && met>40 && DPhi_ll>1.5  && ((((M_ll<80&&M_ll>10)||(M_ll>100))&&l1_flavour==l2_flavour)||(l1_flavour!=l2_flavour)) && Nleptons_pT10==0 && abs(Z_ll)<0.5 && abs(l1_Z)<0.5 && abs(l2_Z)<0.5 && q2_bTag_trackCountingHighPurBJetTags<0.7 && q1_bTag_trackCountingHighPurBJetTags<0.7  
+#
+#
+#

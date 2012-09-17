@@ -1,0 +1,2 @@
+DY     test/Latinos/DYRinout/DDResult-MassVariable.txt
+top    test/Latinos/ttbar/DDResult-MassVariable.txt
